@@ -1,0 +1,92 @@
+/* Zerar margem e padding do body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Fonte padrão para o site */
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    background-color: #CCC;  /* Cor de fundo da barra de navegação */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 60px; /* Ajusta a logo para um tamanho menor e mais elegante */
+    object-fit: contain;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+.seta {
+    margin-right: 10px; /* Espaço maior entre seta e texto */
+    color: #333; /* Cor da seta (opcional) */
+    font-size: 1em; /* Ajusta o tamanho da seta */
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li a:hover {
+    opacity: 0.6; /* Deixa a fonte um pouco apagada ao passar o mouse */
+    transition: opacity 0.3s ease; /* Suaviza a transição */
+}
+/* Submenu inicial escondido */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    margin-top: 5px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+/* Estilo dos itens do submenu */
+.submenu li {
+    display: block;
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+.submenu li a {
+    color: #000;
+    font-size: 14px;
+}
+
+/* Mostra o submenu ao passar o mouse */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
