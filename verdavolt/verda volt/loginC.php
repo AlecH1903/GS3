@@ -22,7 +22,7 @@ include_once("conexao.php");
 
     }else{
         $erros[] = "email ou senha incorretos";
-        var_dump($usuario);
+        
     }
 
 

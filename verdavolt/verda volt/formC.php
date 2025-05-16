@@ -15,7 +15,8 @@ $senha = $_POST["senha"];
 //verifica se a senha possui menos de 6 números
 if (strlen($senha) < 6) {
     $erros[] = "A senha deve ter pelo menos 6 caracteres.";
-}$resultado = mysqli_query($conexao, "SELECT cpf FROM usuarios WHERE email = '$email'");
+}
+$resultado = mysqli_query($conexao, "SELECT cpf FROM usuarios WHERE email = '$email'");
 
 if (mysqli_num_rows($resultado) > 0) {
     $erros[] = "Este e-mail já está cadastrado.";

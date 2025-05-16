@@ -3,11 +3,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif; /* Fonte padrão para o site */
+    background-color: rgb(41, 41, 41)f;
 }
 
 /* Estilo da barra de navegação */
 .navbar {
-    background-color: #CCC;  /* Cor de fundo da barra de navegação */
+    background-color: rgb(255, 255, 255);  /* Cor de fundo da barra de navegação */
     color: white;
     display: flex;
     justify-content: space-between;
