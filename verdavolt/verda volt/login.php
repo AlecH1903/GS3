@@ -23,7 +23,7 @@ include("conexao.php");
     <ul class="nav-links">
       
     </ul>
-   <!-- seus links aqui --> <button class="toggle-theme" onclick="toggleTheme()">Claro/Escuro</button>
+   <button class="toggle-theme" onclick="toggleTheme()">Claro/Escuro</button>
   </div>
 </nav>
 
