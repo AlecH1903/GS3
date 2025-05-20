@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar a linha em telas pequenas */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgb(11, 11, 11);
+  border-radius: 8px;
+}
+
+.texto, .imagem {
+  flex: 1 1 100%; /* ocupa 100% em telas pequenas */
+  max-width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.texto h2 {
+  margin-top: 0;
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 2em;
+}
+
+/* Estilo para telas maiores (desktop) */
+@media (min-width: 768px) {
+  .texto, .imagem {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
