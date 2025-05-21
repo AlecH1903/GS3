@@ -235,6 +235,8 @@ background-color: var(--btn-hover);
   
 }
 
+
+
 .section1 {
   height: 100vh;
   scroll-snap-align: start;
@@ -263,6 +265,20 @@ background-color: var(--btn-hover);
   
 }
 
+.section_cardh {
+  height: 20vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  padding: 0 20px;
+  
+}
+
 #hero {
   background-image: url('m3home.avif');
 }
@@ -277,26 +293,52 @@ background-color: var(--btn-hover);
 
 
 #performance {
-  background-image: url('m3home2.avif');
+  background-image: url('endm3.avif');
 }
 
 #acessor {
   background-color: white;
 }
 
+#carga{
+  background-color: black;
+}
 
 .section-content {
-  padding: 40px;
+  
   border-radius: 8px;
   margin-bottom: 46em;
   
 }
 
+.section-contenthome2 {
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 46em;
+  
+}
+.section-contenthome2 h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.section-contenthome2 p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  
+}
 
 .section-content1 {
-  background-color: rgba(0, 0, 0, 0.5);
+  
   
   border-radius: 8px;
+  
+}
+
+.section-contenth {
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 40em;
   
 }
 
@@ -310,7 +352,16 @@ background-color: var(--btn-hover);
 .section-content2 {
   padding: 40px;
   border-radius: 8px;
-  margin-bottom: 48em;
+  margin-bottom: 46em;
+  color: #000;
+
+}
+
+.section-content5 {
+  margin-top: 50em;
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 46em;
   color: #000;
 }
 
@@ -324,6 +375,9 @@ background-color: var(--btn-hover);
   font-size: 2.5em;
   margin-bottom: 20px;
   }
+
+
+
 
 .section p {
   font-size: 1.2em;
@@ -361,4 +415,50 @@ background-color: var(--btn-hover);
 .btn-secondary:hover {
   background-color: var(--btn-bg);
   color: var(--btn-color);
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.galeria-item {
+  width: calc(33.333% - 20px); /* 3 colunas com gap */
+  
+  
+  
+  text-align: center;
+  
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 620px; /* Ajuste conforme necessário */
+  object-fit: cover;
+  
+  gap: 3px;
+}
+
+.galeria-item p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .galeria-item {
+    width: calc(50% - 20px); /* 2 colunas no tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-item {
+    width: 100%; /* 1 por linha no celular */
+  }
 }
