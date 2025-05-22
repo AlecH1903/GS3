@@ -265,19 +265,7 @@ background-color: var(--btn-hover);
   
 }
 
-.section_cardh {
-  height: 20vh;
-  scroll-snap-align: start;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  text-align: center;
-  padding: 0 20px;
-  
-}
+
 
 #hero {
   background-image: url('m3home.avif');
@@ -310,6 +298,28 @@ background-color: var(--btn-hover);
   margin-bottom: 46em;
   
 }
+
+.section-content2 {
+  
+  border-radius: 8px;
+  margin-bottom: 46em;
+  
+}
+
+.section-content3 {
+  
+  border-radius: 8px;
+  margin-top: 28em;
+  
+}
+
+.section-contentcarga {
+  
+  border-radius: 8px;
+  margin-bottom: 1em;
+  
+}
+
 
 .section-contenthome2 {
   padding: 40px;
@@ -462,3 +472,4 @@ background-color: var(--btn-hover);
     width: 100%; /* 1 por linha no celular */
   }
 }
+

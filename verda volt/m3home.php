@@ -1,6 +1,19 @@
+
+<?php
+include_once("code/loginC.php");
+
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200'
+   height='200' fill='black'/><text x='50%' y='50%' font-family='Roboto' font-size='100' fill='white' text-anchor='middle' dominant-baseline='middle'>V</text></svg>">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Model 3</title>
@@ -14,19 +27,28 @@
    
    <nav class="nav-elegante">
  <div class="nav-container">
-   <a href="verdavolt.html" class="nav-logo">VerdaV</a>
+   <a href="verdavolt.php" class="nav-logo">VerdaV</a>
    <ul class="nav-links">  
      <li><a href="#sobrenos">Sobre Nós</a></li>
      <li><a href="#carros">Carros</a></li>
      <li><a href="#variedades">Variedades</a></li> 
     
       <li class="dropdown">
- <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
+        <?php 
+        if(isset($_SESSION['nome'])){ ?>
+           <a><?php echo $_SESSION['nome'];?></a>
+        <ul class="submenu">
+     <li><a href="code/logout.php">Sair<span ></span></a></li>
+       <?php } else{ ?>
+        <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
  <ul class="submenu">
    <li><a href="login.php">Login</a></li>
    <li><a href="cadastro.php">Cadastro</a></li>
  </ul>
 </li>
+      <?php } ?>
+       
+ 
    </ul>
    
  </div>
@@ -41,7 +63,7 @@
         <h1>Model 3</h1>
         <p>Desempenho e segurança de última geração</p>
         <div class="buttons">
-          <a href="#" class="btn">Encomendar Agora</a>
+          <a href="model3.php" class="btn">Encomendar Agora</a>
           <a href="#" class="btn btn-secondary">Ver Inventário</a>
         </div>
       </div>
@@ -59,10 +81,10 @@
 
 
     <div id="carros" class="carousel-container">
-    <button class="nav-button prev">&#10094;</button>
+    
     <div class="carousel-track" id="carouselTrack1">
       
-      <div class="carousel-slide">
+      <div class="carousel-slide1">
 
       <video id="interior" autoplay loop muted playsinline >
 
@@ -74,7 +96,7 @@
       </div>
       
      </div> <!-- -->
-    <button class="nav-button next">&#10095;</button>
+    
   </div>
 
 
@@ -88,18 +110,16 @@
     </section>
 
 
-  <div class="carousel-slide">
+  <div class="carousel-slide1">
       <video autoplay loop muted playsinline >
   <source src="m3/dentrom3.webm" type="video/webm" />
 </video>
-        <div class="slide-content">
         
-      </div>
       </div>
       
 
     </div>
-    <button class="nav-button next">&#10095;</button>
+   
   </div>
 </div>
 
@@ -140,52 +160,50 @@
 </section>
 
 
+
+
 <section class="section" id="carga">
-<div id="carros" class="carousel-container">
-    <button class="nav-button prev">&#10094;</button>
-    <div class="carousel-track" id="carouselTrack">
-      <div class="carousel-slide">
-        <img src="m3/cargam3.avif" alt="Model S">
-        <div class="slide-content">
-         
-        </div>
-      </div>
-      <div class="carousel-slide">
-        <img src="Modelx.avif" alt="Model X">
-        <div class="slide-content">
-          <h1>Model X</h1>
-          <p>O SUV com o maior desempenho já fabricado. Até 580 km de autonomia.</p>
-           <a class="exbtn" href="#">Descubra</a>
-        </div>
-      </div>
-      <div class="carousel-slide">
-        <img src="modelY.avif" alt="Model Y">
-        <div class="slide-content">
-          <h1>Model Y</h1>
-          <p>Espaçoso, eficiente e pronto para qualquer jornada.</p>
-           <a class="exbtn" href="#">Explore</a>
-        </div>
-      </div>
+  <div class="section-contentcarga">
 
-       <div class="carousel-slide">
-        <img src="model3.avif" alt="Model 3">
-        <div class="slide-content">
-          <h1>Model 3</h1>
-          <p>Desempenho acessível com design elegante e moderno.</p>
-           <a class="exbtn" href="m3home.php">Explore</a>
-        </div>
-      </div>
+        <h2>Carregamento conveniente</h2>
+        <p>Rápido, acessível, fácil — em qualquer lugar com eletricidade</p>
 
+    <div id="carros" class="carousel-container">
+    
+    
+
+      <div class="carousel-track" id="carouselTrack">
+     
+          <div class="carousel-slide">
+            <img src="m3/cargam3.avif" alt="">
+            
+          </div>
+
+          <div class="carousel-slide">
+            <img src="m3/carga3m3.avif" alt="">
+          
+          </div>
+
+          <div class="carousel-slide">
+            <img src="m3/carga2.avif" alt="">
+          
+          </div>
+      
+      </div>
     </div>
-  
   </div>
+
 
   </section>
 
     <section class="section" id="performance">
-      <div class="section-content">
-        <h2>Desempenho Excepcional</h2>
-        <p>Aceleração de 0 a 100 km/h em 3,1 segundos</p>
+      <div class="section-content3">
+        <h1>Model 3</h1>
+        <p>Desempenho e segurança de última geração</p>
+        <div class="buttons">
+          <a href="model3.php" class="btn">Encomendar Agora</a>
+          <a href="#" class="btn btn-secondary">Ver mais</a>
+        </div>
       </div>
     </section>
   </main>

@@ -1,15 +1,16 @@
 <?php
 
-include("loginC.php");
-include("conexao.php");
+include("code/loginC.php");
+include("code/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200' height='200' fill='black'/><text x='50%' y='50%' font-family='Roboto' font-size='100' fill='white' text-anchor='middle' dominant-baseline='middle'>V </text> </svg>">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
-  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="css/login.css" />
   <!-- <link rel="stylesheet" href="css/navlogin.css" /> -->
 </head>
 
@@ -19,7 +20,7 @@ include("conexao.php");
    
     <nav class="nav-elegante">
   <div class="nav-container">
-    <a href="verdavolt.html" class="nav-logo">VerdaV</a>
+    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
     <ul class="nav-links">
       
     </ul>
@@ -33,7 +34,9 @@ include("conexao.php");
 
 
   <div class="login-wrapper">
+    
     <form action="login.php" method="POST" class="login-form">
+      <a name="backbtn" href="verdavolt.php" class="back-button">← Voltar</a>
       <h2>Entrar</h2>
 
       <div class="form-group">

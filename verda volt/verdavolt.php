@@ -1,15 +1,10 @@
+
 <?php
 include_once("code/loginC.php");
 
 
-
-if (!isset($_SESSION['nome'])) {
-    header("Location: login.php");
-    exit();
-}
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,24 +21,35 @@ if (!isset($_SESSION['nome'])) {
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body bgcolor="black">
-    <header>
+   <header>
    
-    <nav class="nav-elegante">
-  <div class="nav-container">
-    <a href="#" class="nav-logo">VerdaV</a>
-    <ul class="nav-links">  
-      <li><a href="#sobrenos">Sobre Nós</a></li>
-      <li><a href="#carros">Carros</a></li>
-      <li><a href="#variedades">Variedades</a></li>
-       <li class="dropdown">
-        <a><?php echo $_SESSION['nome'];?></a>
+   <nav class="nav-elegante">
+ <div class="nav-container">
+   <a href="verdavolt.php" class="nav-logo">VerdaV</a>
+   <ul class="nav-links">  
+     <li><a href="#sobrenos">Sobre Nós</a></li>
+     <li><a href="#carros">Carros</a></li>
+     <li><a href="#variedades">Variedades</a></li> 
+    
+      <li class="dropdown">
+        <?php 
+        if(isset($_SESSION['nome'])){ ?>
+           <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
      <li><a href="code/logout.php">Sair<span ></span></a></li>
-  </ul>
-       
+       <?php } else{ ?>
+        <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
+ <ul class="submenu">
+   <li><a href="login.php">Login</a></li>
+   <li><a href="cadastro.php">Cadastro</a></li>
+ </ul>
 </li>
-    </ul>
-  </div>
+      <?php } ?>
+       
+ 
+   </ul>
+   
+ </div>
 </nav>
 
 </header>
@@ -174,4 +180,4 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
     <script src="js/carrossel.js"></script>
     <script src="js/telao.js"></script>
 </body>
-</html>h1>Bem vindo! <?php echo $_SESSION['nome'];?></h1>
+</html>

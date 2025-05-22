@@ -1,15 +1,16 @@
 <?php
-include("formC.php");
-include_once("conexao.php");
+include("code/formC.php");
+include_once("code/conexao.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200' height='200' fill='black'/><text x='50%' y='50%' font-family='Roboto' font-size='100' fill='white' text-anchor='middle' dominant-baseline='middle'>V </text> </svg>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário de Cadastro</title>
-  <link rel="stylesheet" href="cadastro1.css">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="css/cadastro1.css">
 </head>
 <body>
 
@@ -17,9 +18,9 @@ include_once("conexao.php");
    
     <nav class="nav-elegante">
   <div class="nav-container">
-    <a href="verdavolt.html" class="nav-logo">VerdaV</a>
+    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
     <ul class="nav-links">
-      <!-- seus links aqui -->
+     
     </ul>
     <button class="toggle-theme" onclick="toggleTheme()">Claro/Escuro</button>
   </div>
@@ -29,7 +30,7 @@ include_once("conexao.php");
 </header>
 
   <div class="form-container">
-    <a href="verdavolt.html" class="back-button">← Voltar</a>
+    <a href="verdavolt.php" class="back-button">← Voltar</a>
     <form action="cadastro.php" method="POST" class="form-box">
       <h2>Cadastro</h2>
 
