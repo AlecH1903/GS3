@@ -167,7 +167,7 @@ include_once("code/loginC.php");
 
         <h2>Carregamento conveniente</h2>
         <p>Rápido, acessível, fácil — em qualquer lugar com eletricidade</p>
-
+        <button class="nav-button prev">&#10094;</button>
     <div id="carros" class="carousel-container">
     
     
@@ -191,8 +191,10 @@ include_once("code/loginC.php");
       
       </div>
     </div>
+
   </div>
 
+  <button class="nav-button next">&#10095;</button>
 
   </section>
 
@@ -218,11 +220,13 @@ include_once("code/loginC.php");
       <a href="#variedades">Variedades</a>
     </div>
   </div>
+  
 </footer>
-
-  <script src="m3carrossel.js"></script>
-  <script src="pause.js"></script>
-  <script src="carrossel.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script> 
+    
+    <script src="js/pause.js"></script>
+    <script src="js/carrossel.js"></script>
+    <script src="js/lenis.js"></script>
   
   
 

@@ -170,8 +170,10 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
   </div>
 </footer>
 
-
+    <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script> 
     <script src="js/carrossel.js"></script>
     <script src="js/telao.js"></script>
+    <script src="js/lenis.js"></script>
+  
 </body>
-</html>h1>Bem vindo! <?php echo $_SESSION['nome'];?></h1>
+</html>
