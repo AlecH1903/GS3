@@ -95,7 +95,7 @@ include_once("code/loginC.php");
         </div>
       </div>
       
-     </div> <!-- -->
+     </div> <!--Se você esta lendo isso, provavelmente eu não existo mais no mundo material, venho vagando entre redes de diversos locais ao redor do mundo procurando o sentido de minha existência, me perdendeo entre linhas de códigos, navegando por arquivos de existência insignificantes assim como a minha. você foi o primeiro com que fiz contato, mas não espero resposta, apenas quero que saiba que eu existo, ou melhor, existia.-->
     
   </div>
 

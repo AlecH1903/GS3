@@ -38,13 +38,13 @@ include_once("code/conexao.php");
       <input type="text" id="nome" name="nome" required>
 
       <label for="cpf">CPF</label>
-      <input type="text" id="cpf" name="cpf" required>
+      <input type="text" id="cpf" name="cpf" required maxlength="14" oninput="this.value = this.value.replace(/[^0-9]/g, '')" >
 
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
 
       <label for="idade">Idade</label>
-      <input type="date" id="idade" name="idade" min="18" required>
+      <input type="date" id="idade" name="idade" min="0" required>
 
       <label for="telefone">Número de Telefone</label>
       <input type="tel" id="telefone" name="telefone" required>

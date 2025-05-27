@@ -38,7 +38,7 @@ if (!isset($_SESSION['nome'])) {
        <li class="dropdown">
         <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
-          <li><a href="perfil.php">Perfil<span ></span></a></li>
+        <li><a href="perfil.php">Perfil<span ></span></a></li>
      <li><a href="code/logout.php">Sair<span ></span></a></li>
   </ul>
        
@@ -117,7 +117,7 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
         <div class="slide-content">
           <h1>Model Y</h1>
           <p>Espaçoso, eficiente e pronto para qualquer jornada.</p>
-           <a class="exbtn" href="#">Explore</a>
+           <a class="exbtn" href="myhome.php">Explore</a>
         </div>
       </div>
 
@@ -163,7 +163,7 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
   <footer class="footer">
   <div class="footer-container">
     <div class="footer-links">
-      <a href="verdavolt.html">Verda Volt © 2025</a>
+      <a href="verdavolt.php">Verda Volt © 2025</a>
       <a href="#sobrenos">Um pouco sobre nós</a>
       <a href="#carros">Carros</a>
       <a href="#variedades">Variedades</a>

@@ -36,8 +36,8 @@ include_once("code/loginC.php");
         if(isset($_SESSION['nome'])){ ?>
            <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
-         <li><a href="perfil.php">Perfil<span ></span></a></li>
-         <li><a href="code/logout.php">Sair<span ></span></a></li>
+      <li><a href="perfil.php">Perfil<span ></span></a></li>
+     <li><a href="code/logout.php">Sair<span ></span></a></li>
        <?php } else{ ?>
         <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
  <ul class="submenu">
@@ -123,7 +123,7 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
         <div class="slide-content">
           <h1>Model Y</h1>
           <p>Espaçoso, eficiente e pronto para qualquer jornada.</p>
-           <a class="exbtn" href="#">Explore</a>
+           <a class="exbtn" href="myhome.php">Explore</a>
         </div>
       </div>
 

@@ -6,7 +6,7 @@
 
 body, html {
   height: 100%;
-  
+  overflow: hidden;
 }
 
 .main-layout {
@@ -22,7 +22,7 @@ body, html {
   background-color: white;
   background-size: cover;
   background-position: center;
-  display: fixed;
+  display:block;
 }
 
 /* Parte da informação (30%) */
@@ -30,14 +30,12 @@ body, html {
   flex: 3;
   background-color: #f5f5f5;
   padding: 3rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow-y: scroll;
-  
-    
-  
+  height: 100vh;
+  overflow-y: auto;
+  display: block;
 }
+
+
 
 .info-section h1 {
   font-size: 2.8rem;
@@ -260,4 +258,25 @@ body, html {
 }
 .h1model3{
   text-align: center;
+}
+.div-content{
+  border-radius: 8px;
+  margin-bottom: 46em;
+  
+  
+}
+.div-content h2{
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container-lado {
+  display: flex;
+  gap: 50em; 
+  
+}
+.item {
+  
+  gap: 2em; 
+  margin-left: 1em;
 }
