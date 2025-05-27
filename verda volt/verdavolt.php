@@ -36,7 +36,8 @@ include_once("code/loginC.php");
         if(isset($_SESSION['nome'])){ ?>
            <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
-     <li><a href="code/logout.php">Sair<span ></span></a></li>
+         <li><a href="perfil.php">Perfil<span ></span></a></li>
+         <li><a href="code/logout.php">Sair<span ></span></a></li>
        <?php } else{ ?>
         <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
  <ul class="submenu">
