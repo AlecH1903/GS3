@@ -59,7 +59,7 @@ include_once("code/loginC.php");
 </header>
 
  
-  <main>
+  <main style="background-color: white;">
     <section class="section hero" id="hero">
       <div class="section-contentm3">
         <h1>Model Y</h1>
@@ -71,50 +71,41 @@ include_once("code/loginC.php");
       </div>
     </section>
 
-     <section class="section" id="home2"> <!--  -->
-      <div class="section-content5">
+    <section class="section5" id="home2"> <!--  -->
+  <div class="section-content5">
 
-            <div class="container-lado">
+<div class="container-lado" style="color: black;">
+  <div class="item">  <h2>357 mi</h2> <h3> 
+    Alcance (estimativa EPA)²
+    </h3></div>
+  <div class="item"><h2>182mi </h2><h3>
+  Carga em 15 min³</h3>
+    </div>
+  <div class="item"><h2>FSD </h2><h3> 
+   Compatível com Full Self-Driving <br> (Supervisionado)</h3></div>
+</div>
 
-        <div class="item"> 
-           <h3> 363mi </h3> <p> <br>
-          Alcance (EPA est.)
-          </p>
+      <div id="carros" class="carousel-container1" style="margin-left: 4.5em; border-radius:1em;margin-right: -5em;">
+    
+    
 
-        </div>
-        
-          <div class="item">
+        <div class="carousel-track" id="">
+    
+          <div class="carousel-slide">
+            <img src="my/mysection1.avif" alt="" style="border-radius: 0; border:0cap">
             
-          <h3>125mph </h3><p><br>
-        Velocidade máxima</p>
-          
-      </div>
-        
-          <div class="item">
-            
-          <h3>4.9sec </h3><p> <br>
-          0-60 mph</p></div>
+          </div>
+
       
         </div>
-
-       
-      <div id="carros" class="carousel-container1">
-    
-    
-
-    <div class="carousel-track" id="">
-   
-        <div class="carousel-slide">
-          <img src="my/mysection1.avif" alt="">
-          
-        </div>
-
-    
-        </div>
-            </div>
       </div>
-    </div>
-       </section>
+    </div></div>
+   </section>
+       
+        <h2 style="color: black; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Redesenhado de Ponta a Ponta</h2> <br>
+        <h1 style="color: black; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Do para-choque dianteiro até a lanterna traseira, o exterior foi completamente redesenhado para oferecer a
+           máxima eficiência, permitindo que você aproveite ao máximo a autonomia a cada carga.
+           Com suspensão, rodas e pneus atualizados, sua viagem será mais suave e silenciosa.</h1>
 
     <div id="carros" class="carousel-container">
     
