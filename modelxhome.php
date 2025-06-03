@@ -9,14 +9,15 @@ include_once("code/loginC.php");
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Model X | VerdaV</title>
+  <link rel="stylesheet" href="css/nav1.css">
   <link rel="stylesheet" href="mx/mx.css" />
   <link rel="stylesheet" href="mx/mxcarrossel.css">
   <link rel="stylesheet" href="css/footer.css">
   <style>
-    html {
+    /* html {
       scroll-snap-type: y mandatory;
       scroll-behavior: smooth;
-    }
+    } */
   </style>
 </head>
 <body>
@@ -52,7 +53,7 @@ include_once("code/loginC.php");
 
 <main>
   <!-- Seção Hero - Destaque para as portas Falcon -->
-  <section class="section hero" id="model-x" style="background-image: url('mx/modelx-hero.avif');">
+  <section class="section hero" id="model-x" style="background-image: url('mx/mxhome.avif');">
     <div class="section-content">
       <h1>Model X</h1>
       <p>O SUV mais avançado já criado</p>
