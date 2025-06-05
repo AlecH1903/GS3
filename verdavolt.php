@@ -111,7 +111,7 @@ Nossa Missão: <br>
         <div class="slide-content">
           <h1>Model X</h1>
           <p>O SUV com o maior desempenho já fabricado. Até 580 km de autonomia.</p>
-           <a class="exbtn" href="#">Descubra</a>
+           <a class="exbtn" href="modelxhome.php">Descubra</a>
         </div>
       </div>
       <div class="carousel-slide">

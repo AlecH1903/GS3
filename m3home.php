@@ -30,7 +30,7 @@ include_once("code/loginC.php");
    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
    <ul class="nav-links">  
      <li><a href="sobrenos.php">Sobre Nós</a></li>
-     <li><a href="#carros">Carros</a></li>
+     <li><a href="verdavolt.php#carros">Carros</a></li>
      <li><a href="#variedades">Variedades</a></li> 
     
       <li class="dropdown">

@@ -59,7 +59,7 @@ include_once("code/loginC.php");
   <div class="main-layout">
     <div class="background-section">
     <section class="section" id="carga">
-  <div class="section-contentcarga">
+   <div class="section-contentcarga">
 
         
     <div id="carros" class="carousel-container">
