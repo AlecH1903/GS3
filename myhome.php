@@ -1,5 +1,6 @@
 <?php
 include_once("code/loginC.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +53,7 @@ include_once("code/loginC.php");
       <h1>Model Y</h1>
       <p>A partir de 90 mil</p>
       <div class="buttons">
-        <a href="model3.php" class="btn">Encomendar Agora</a>
+        <a href="modely.php" class="btn">Encomendar Agora</a>
         <a href="#" class="btn btn-secondary">Ver Inventário</a>
       </div>
     </div>
@@ -302,7 +303,7 @@ include_once("code/loginC.php");
       <h1>Model Y</h1>
       <p>Desempenho e segurança de última geração</p>
       <div class="buttons">
-        <a href="model3.php" class="btn">Encomendar Agora</a>
+        <a href="modely.php" class="btn">Encomendar Agora</a>
         <a href="#" class="btn btn-secondary">Ver mais</a>
       </div>
     </div>
