@@ -30,8 +30,9 @@ body, html {
   flex: 3;
   background-color: #f5f5f5;
   padding: 3rem 2rem;
-  height: 100vh;
-  overflow-y: auto;
+  height:100vh;
+  
+  overflow-y:auto;
   display: block;
 }
 
@@ -272,8 +273,8 @@ body, html {
 }
 .container-lado {
   display: flex;
-  gap: 50em; 
-  
+  gap: 5em; 
+  color: #000;
 }
 .item {
   
