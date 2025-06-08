@@ -10,7 +10,7 @@ include_once("code/conexao.php");
 
     $email = mysqli_real_escape_string($conexao, $email);
 
-     $resultado = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email = '$email'");
+     $resultado = mysqli_query($conexao, "SELECT * FROM usuarios WHERE cpf = '$cpf'");
      $usuario = mysqli_fetch_assoc($resultado);
 
     if($usuario && password_verify($senha,$usuario['senha'])){

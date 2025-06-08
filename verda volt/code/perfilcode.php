@@ -2,7 +2,10 @@
 
 
 include_once("code/conexao.php");
-
+ $cpf = $_SESSION['cpf'];
+ $sqlUser = "SELECT * FROM usuarios WHERE cpf='$cpf'";
+$resultUser = mysqli_query($conexao, $sqlUser);
+$user = mysqli_fetch_assoc($resultUser);
 
 if (!isset($_SESSION['email'])) {
     header("Location: verdavolt.php");
@@ -20,8 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $novo_telefone = $_POST['telefone'];
         $nova_data_nascimento = $_POST['data'];
         $nova_senha = $_POST['nova_senha'];
-
-        
+        if(isset($_POST['foto'])){
+        $foto = $_POST['foto'];
+        }
         $resultado = mysqli_query($conexao, "SELECT senha FROM usuarios WHERE email = '".$_SESSION['email']."'");
         $usuario = mysqli_fetch_assoc($resultado);
 
@@ -65,7 +69,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $erros[] = "A nova senha deve ter pelo menos 6 caracteres.";
                 }
             }
-            
+            if(isset($foto)){
+             $campos[] = $foto;
+             if(!isset($foto)){
+                $sql = "INSERT INTO usuarios foto_perfil WHERE cpf = '".$_SESSION['cpf']."'";
+                mysqli_query($conexao,$sql);
+             }}
             
             if (empty($erros) && !empty($campos)) {
                 $sql = "UPDATE usuarios SET ".implode(", ", $campos)." WHERE cpf = '".$_SESSION['cpf']."'";
@@ -78,6 +87,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $erros[] = "Senha atual incorreta. Por favor, tente novamente.";
         }
+        if (isset($_FILES['foto']) && $_FILES['foto']['error'] === 0) {
+    $imagem = file_get_contents($_FILES['foto']['tmp_name']);
+    $imagem = mysqli_real_escape_string($conexao, $imagem);
+$cpf = $_SESSION['cpf'];
+
+    $sqlFoto = "UPDATE usuarios SET foto_perfil='$imagem' WHERE cpf='$cpf'";
+
+    if (mysqli_query($conexao, $sqlFoto)) {
+      $sucesso = true;
+    } else {
+      $erros[] = "Erro ao atualizar foto.";
     }
+  }
+ $cpf = $_SESSION['cpf'];
+ $sqlUser = "SELECT * FROM usuarios WHERE cpf='$cpf'";
+$resultUser = mysqli_query($conexao, $sqlUser);
+$user = mysqli_fetch_assoc($resultUser);
+
+
+}
+}
+$fotoSrc = "default.jpg";
+if (!empty($user['foto_perfil'])) {
+  $fotoSrc = "data:image/jpeg;base64," . base64_encode($user['foto_perfil']);
 }
 ?>
