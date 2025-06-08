@@ -1,6 +1,6 @@
 <?php
 include_once("code/loginC.php");
-
+include_once("compra.php");
 $logado = isset($_SESSION['email']);
 
 
@@ -354,7 +354,38 @@ $logado = isset($_SESSION['email']);
     return;
   }
 
-  alert('Compra realizada com sucesso!');
-});</script>
+  // Calcula novamente o total
+  let total = basePrices[selectedModel];
+  total += colorOptions.find(o => o.id === selectedColor).price;
+  total += interiorOptions.find(o => o.id === selectedInterior).price;
+  const wheel = wheelOptions.find(o => o.id === selectedWheel);
+  total += wheel.price;
+
+  // Cria os dados para enviar
+  const dados = new URLSearchParams();
+  dados.append("modelo", selectedModel + "s");
+  dados.append("cor", selectedColor);
+  dados.append("interior", selectedInterior);
+  dados.append("rodas", selectedWheel);
+  dados.append("preco_total", total.toFixed(2));
+
+  fetch("compra.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: dados.toString()
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert(data); // Pode ser mensagem de sucesso do PHP
+  })
+  .catch(error => {
+    console.error("Erro ao enviar os dados:", error);
+  });
+});
+
+
+</script>
 </body>
 </html>

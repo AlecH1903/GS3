@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/maproject.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200' height='200' fill='black'/><text x='50%' y='50%' font-family='Roboto' font-size='100' fill='white' text-anchor='middle' dominant-baseline='middle'>V </text> </svg>"> 
   <title>Programa de Assinatura</title>
   <style>
@@ -114,6 +115,17 @@
       Assine Agora
     </a>
   </section>
+
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="verdavolt.html">Verda Volt © 2025</a>
+      <a href="sobrenos.php">Um pouco sobre nós</a>
+      <a href="#carros">Carros</a>
+      <a href="#variedades">Variedades</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
