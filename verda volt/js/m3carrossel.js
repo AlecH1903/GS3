@@ -1,9 +1,8 @@
 const track = document.getElementById('carouselTrack');
 const slides = document.querySelectorAll('.carousel-slide');
-const prevBtn = document.querySelector('.prev');
-
-let index = 0;
-
+const prevBtn = document.querySelector('.prev');const nextBtn = document.querySelector('.next');
+    let index = 0;
+    
 function showSlide(i) {
   const slideWidth = slides[0].clientWidth;
   track.style.transform = `translateX(-${slideWidth * i}px)`;

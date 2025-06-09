@@ -39,6 +39,7 @@ if (!isset($_SESSION['nome'])) {
         <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
         <li><a href="perfil.php">Perfil<span ></span></a></li>
+        <li><a href="inventario.php">Garagem<span ></span></a></li>
      <li><a href="code/logout.php">Sair<span ></span></a></li>
   </ul>
        

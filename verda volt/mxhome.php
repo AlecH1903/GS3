@@ -60,7 +60,7 @@ include_once("code/loginC.php");
  
   <main>
     <section class="section hero" id="hero">
-      <div class="section-contentm3">
+      <div class="section-contentm3" style="margin-top: 11em;">
         <h1>Model X</h1>
         <p>Desempenho e segurança de última geração</p>
         <div class="buttons">
@@ -73,7 +73,7 @@ include_once("code/loginC.php");
      <section class="section" id="home2"> <!--  -->
       <div class="section-content">
 
-      <h2>Interior Do Futuro </h2>
+      <h2 style="margin-top: 2em;">Interior Do Futuro </h2>
       
       </div>
     </section>
@@ -199,7 +199,7 @@ include_once("code/loginC.php");
     <section class="section" style=" background-image: url('mx/mxmid.avif');" >
       <div class="section-content2">
         <div class="container-lado"style=" display: flex; align-itens:center;
-  gap: 2em; margin-top:80em">
+  gap: 2em; margin-top:66em">
   <div class="item" style="color: white;" >  <h2 style="font-size:x-large;"> 1,020 hp </h2> <p> 
     Peak Power
     </p></div>

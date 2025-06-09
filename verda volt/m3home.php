@@ -59,8 +59,8 @@ include_once("code/loginC.php");
  
   <main>
     <section class="section hero" id="hero">
-      <div class="section-contentm3">
-        <h1>Model 3</h1>
+      <div class="section-contentm3" >
+        <h1 style="margin-top: 7em;">Model 3</h1>
         <p>Desempenho e segurança de última geração</p>
         <div class="buttons">
           <a href="model3.php" class="btn">Encomendar Agora</a>
@@ -70,9 +70,9 @@ include_once("code/loginC.php");
     </section>
 
      <section class="section" id="home2"> <!--  -->
-      <div class="section-content">
+      <div class="section-content" >
 
-      <h2>Feito para Longas Distâncias </h2>
+      <h2 style=" margin-top: 4em;">Feito para Longas Distâncias </h2>
       <p>
         Percorra até 580 km (estimativa EPA) com uma única carga,
         com estilo exterior atualizado e otimizado <br> para máxima aerodinâmica.</p>
@@ -125,8 +125,8 @@ include_once("code/loginC.php");
 
 
     <section class="section" id="interior">
-      <div class="section-content2">
-        <h2>Uma Cabine Mais Silenciosa</h2>
+      <div class="section-content2" >
+        <h2 style="margin-top: 3em;">Uma Cabine Mais Silenciosa</h2>
         <p>Desfrute de uma cabine silenciosa, graças ao vidro acústico de 360 ​​graus. Contemple o céu sob um teto todo de vidro 
          <br> que permite a entrada de luz e protege você dos raios UV nocivos.
         </p>
@@ -157,12 +157,12 @@ include_once("code/loginC.php");
       </div>
     </div>
   </div>
-</section>
+</section >
 
 
 
 
-<section class="section" id="carga">
+<section class="section" id="carga" >
   <div class="section-contentcarga">
 
         <h2>Carregamento conveniente</h2>
