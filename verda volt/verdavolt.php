@@ -152,8 +152,8 @@ Nossa Missão: <br>
 
     <div class="hero-card">
       <div class="hero-text">
-        <h2>Compare Nossos Modelos</h2>
-        <a href="#" class="learn-more">Veja mais</a>
+        <h2>Garagem Virtual</h2>
+        <a href="inventario.php" class="learn-more">Veja mais</a>
       </div>
       <div class="hero-image">
         <img src="main/comparehome.avif" alt="">

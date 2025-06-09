@@ -125,10 +125,7 @@ if (!isset($_SESSION['cpf'])) {
                                 </div>
                             </div>
                             
-                            <div class="car-actions">
-                                <button class="action-btn primary">Detalhes</button>
-                                <button class="action-btn secondary">Vender</button>
-                            </div>
+                        
                         </div>
                     </div>
                 <?php endforeach; ?>

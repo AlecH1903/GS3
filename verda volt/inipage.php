@@ -140,7 +140,7 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
     <div class="hero-card">
       <div class="hero-text">
         <h2>Projeto Meio Ambiente</h2>
-        <a href="#" class="learn-more">Veja mais</a>
+        <a href="maproject.php" class="learn-more">Veja mais</a>
       </div>
       <div class="hero-image">
         <img src="main/homecars.avif" alt="">
@@ -149,8 +149,8 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
 
     <div class="hero-card">
       <div class="hero-text">
-        <h2>Compare Nossos Modelos</h2>
-        <a href="maproject.php" class="learn-more">Veja mais</a>
+        <h2>Garagem Virtual</h2>
+        <a href="inventario.php" class="learn-more">Veja mais</a>
       </div>
       <div class="hero-image">
         <img src="main/comparehome.avif" alt="">
