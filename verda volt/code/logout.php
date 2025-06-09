@@ -1,7 +1,7 @@
 <?php
 session_start();           
-session_unset();           // Limpa todas as variáveis de sessão
-session_destroy();         // Destroi a sessão atual
+session_unset();           
+session_destroy();         // pega e destrou a sessão
 
 
 header("Location: /verda volt/verdavolt.php");

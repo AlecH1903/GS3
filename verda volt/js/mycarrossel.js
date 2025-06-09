@@ -19,7 +19,7 @@
       showSlide(index);
     });
 
-    // Auto slide
+    
     setInterval(() => {
       index = (index + 1) % slides.length;
       showSlide(index);

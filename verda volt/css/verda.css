@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  flex-wrap: wrap; /* permite quebrar a linha em telas pequenas */
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 30px;
@@ -12,7 +12,7 @@
 }
 
 .texto, .imagem {
-  flex: 1 1 100%; /* ocupa 100% em telas pequenas */
+  flex: 1 1 100%; 
   max-width: 100%;
   font-family: 'Roboto', sans-serif;
   color: #fff;
@@ -30,7 +30,6 @@
   margin-top: 2em;
 }
 
-/* Estilo para telas maiores (desktop) */
 @media (min-width: 768px) {
   .texto, .imagem {
     flex: 1 1 45%;

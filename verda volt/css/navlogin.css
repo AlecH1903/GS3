@@ -1,11 +1,11 @@
  .nav-elegante {
-    background-color: #000; /* fundo preto */
+    background-color: #000; 
     padding: 15px 40px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     position: sticky;
     top: 0;
     z-index: 100;
-      border-bottom: 1px solid white; /* faixa branca fina na parte inferior */
+      border-bottom: 1px solid white; 
   }
 
   .nav-container {
@@ -69,12 +69,11 @@
       font-size: 0.9em;
     }
   }
-  /* Dropdown container */
+
 .dropdown {
   position: relative;
 }
 
-/* Link principal do dropdown */
 .dropbtn {
   cursor: pointer;
   display: flex;
@@ -89,7 +88,6 @@
   transition: color 0.3s ease;
 }
 
-/* Seta ao lado do texto */
 .seta {
   font-size: 0.6em;
   line-height: 1;
@@ -97,7 +95,6 @@
   display: inline-block;
 }
 
-/* Submenu escondido por padrão */
 .submenu {
   position: absolute;
   top: 100%;
@@ -116,7 +113,6 @@
   z-index: 10;
 }
 
-/* Itens do submenu */
 .submenu li a {
   display: block;
   padding: 8px 20px;
@@ -132,20 +128,17 @@
   background-color: #222;
 }
 
-/* Mostrar submenu ao passar o mouse */
 .dropdown:hover .submenu,
 .dropdown:focus-within .submenu {
   opacity: 1;
   visibility: visible;
 }
 
-/* Seta rotaciona ao abrir */
 .dropdown:hover .seta,
 .dropdown:focus-within .seta {
   transform: rotate(180deg);
 }
 
-/* Mantém a linha embaixo do texto no hover do link principal */
 .dropbtn::after {
   content: '';
   position: absolute;

@@ -122,7 +122,6 @@ body {
   background-color: var(--btn-hover);
 }
 
-/* FORMULÁRIO */
 
 .form-container {
   max-width: 400px;
@@ -216,7 +215,7 @@ body {
   color: var(--btn-hover);
 }
 
-/* Mensagens de erro PHP */
+
 .login-link p,
 .login-link span {
   

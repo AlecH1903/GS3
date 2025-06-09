@@ -32,7 +32,7 @@ if (empty($erros)) {
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
 $data_mysql = date("Y-m-d", strtotime(str_replace("/", "-", $idade)));
-// Resultado: 2025-05-14
+// Resultado: 2025-05-14, muda pra coisar o bd
 
 $sql = mysqli_query($conexao, "INSERT INTO usuarios (nome, cpf, email, data_nascimento, telefone, senha) 
 VALUES('$nome', '$cpf', '$email',' $data_mysql', '$ntelefone', '$senha_hash')");

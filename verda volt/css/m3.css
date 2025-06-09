@@ -85,7 +85,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Seções */
+/* sessões */
 .section {
   height: 100vh;
   scroll-snap-align: start;
@@ -128,7 +128,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* Botões */
 .buttons {
   display: flex;
   gap: 20px;

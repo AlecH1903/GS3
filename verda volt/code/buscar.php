@@ -1,11 +1,10 @@
 <?php
-// Buscar informações do usuário
+
 $cpf = $_SESSION['cpf'];
 $sqlUser = "SELECT * FROM usuarios WHERE cpf='$cpf'";
 $resultUser = mysqli_query($conexao, $sqlUser);
 $user = mysqli_fetch_assoc($resultUser);
 
-// Buscar compras do usuário
 $sqlCompras = "SELECT * FROM compras WHERE id_usuario='$cpf'";
 $resultCompras = mysqli_query($conexao, $sqlCompras);
 $compras = [];
@@ -13,7 +12,6 @@ while ($compra = mysqli_fetch_assoc($resultCompras)) {
     $compras[] = $compra;
 }
 
-// Mapeamento de modelos para informações detalhadas
 $carrosInfo = [
     'rwd3' => [
         'nome' => 'Model 3 RWD',
@@ -137,7 +135,6 @@ $carrosInfo = [
     ],
 ];
 
-// Contar coleções completas (exemplo simplificado)
 $colecoesCompletas = 0;
 $modelosComprados = [];
 foreach ($compras as $compra) {
@@ -147,5 +144,5 @@ foreach ($compras as $compra) {
         $colecoesCompletas++;
     }
 }
-$colecoesCompletas = min($colecoesCompletas, 3); // Limite máximo de 3 para o exemplo
+$colecoesCompletas = min($colecoesCompletas, 3); 
 ?>

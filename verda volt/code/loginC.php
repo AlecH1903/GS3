@@ -22,6 +22,12 @@ include_once("code/conexao.php");
         $_SESSION['telefone'] = $usuario['telefone'];
         $_SESSION['data'] = date("d-m-Y", strtotime(str_replace("/", "-", $usuario['data_nascimento'])));
         $_SESSION['senha'] = $usuario['senha'];
+        $sql = "SELECT ativa FROM assinaturas WHERE id_usuario = '$_SESSION[cpf]' ";
+mysqli_query($conexao,$sql);
+
+if($sql == true){
+    $_SESSION['assinante'] = true;
+}
         header("Location: inipage.php");
         exit();
 

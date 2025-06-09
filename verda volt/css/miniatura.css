@@ -9,7 +9,7 @@
 
 .miniatura {
     flex: 1;
-    max-width: 12.5%; /* 4 imagens = 50% total (4 x 12.5%) */
+    max-width: 12.5%; 
     height: auto;
     cursor: pointer;
     transition: opacity 0.3s ease;
