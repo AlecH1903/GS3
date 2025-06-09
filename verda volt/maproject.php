@@ -1,3 +1,8 @@
+<?php 
+include("code/conexao.php");
+include_once("code/loginC.php");
+include("code/assinar.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -64,8 +69,8 @@
    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
    <ul class="nav-links">  
      <li><a href="sobrenos.php">Sobre Nós</a></li>
-     <li><a href="verdavolt.php#carros">Carros</a></li>
-     <li><a href="verdavolt.php#variedades">Variedades</a></li> 
+     <li><a href="#carros">Carros</a></li>
+     <li><a href="#variedades">Variedades</a></li> 
     
       <li class="dropdown">
         <?php 
@@ -73,6 +78,7 @@
            <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
       <li><a href="perfil.php">Perfil<span ></span></a></li>
+      <li><a href="inventario.php">Garagem<span ></span></a></li>
      <li><a href="code/logout.php">Sair<span ></span></a></li>
        <?php } else{ ?>
         <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
@@ -91,12 +97,10 @@
 
 </header>
 
-  <!-- Seção de imagem/banner -->
   <section class="hero">
     <h1 style="font-family: 'roboto'">Programa Meio Ambiente</h1>
   </section>
 
-  <!-- Seção de conteúdo -->
   <section class="content">
     <h2>Programa Meio Ambiente</h2>
     <p>
@@ -109,11 +113,11 @@
       Os contribuinte do projeto meio ambiente, assinando nosso projeto, receberão seguro e manutenção gratuíta, em troca, com a <br>
       verba adquirida, iremos investir em áreas verdes e projetos para o meio-ambiente.
     </p>
-
-    <!-- Botão de assinatura -->
-    <a href="" class="btn-subscribe">
-      Assine Agora
-    </a>
+<form action="maproject.php" method="POST">
+    <button type="submit" name="btnma" class="btn-subscribe">
+        <?php echo (isset($_SESSION['assinante']) ? 'Assinatura Ativa' : 'Assine Agora'); ?>
+    </button>
+</form>
   </section>
 
  <footer class="footer">

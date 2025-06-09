@@ -139,7 +139,7 @@ Nossa Missão: <br>
 
 
     <div id="variedades" class="heroes-wrapper">
-    <!-- First card -->
+   
     <div class="hero-card">
       <div class="hero-text">
         <h2>Projeto Meio Ambiente</h2>
@@ -150,7 +150,6 @@ Nossa Missão: <br>
       </div>
     </div>
 
-    <!-- Second card -->
     <div class="hero-card">
       <div class="hero-text">
         <h2>Compare Nossos Modelos</h2>

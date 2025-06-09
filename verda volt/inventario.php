@@ -16,7 +16,7 @@ if (!isset($_SESSION['cpf'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Garagem | Inventário de Carros</title>
+    <title>Minha Garagem</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/inv.css">
 
@@ -53,7 +53,12 @@ if (!isset($_SESSION['cpf'])) {
 </nav>
     
     <main class="container">
-        <div class="stats">
+         <div class="garage-title">
+        <h2>Meu Inventário</h2>
+        </div>
+       
+        <div class="garage-title">
+            <div class="stats">
             <div class="stat-card">
                 <i class="fas fa-car"></i>
                 <div class="stat-info">
@@ -61,24 +66,7 @@ if (!isset($_SESSION['cpf'])) {
                     <p>Carros na Garagem</p>
                 </div>
             </div>
-            <div class="stat-card">
-                <i class="fas fa-trophy"></i>
-                <div class="stat-info">
-                    <h3><?= $colecoesCompletas ?></h3>
-                    <p>Coleções Completas</p>
-                </div>
             </div>
-            <div class="stat-card">
-                <i class="fas fa-star"></i>
-                <div class="stat-info">
-                    <h3><?= min(count($compras) * 3, 24) ?></h3>
-                    <p>Conquistas</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="garage-title">
-            <h2>Meu Inventário</h2>
             <div class="filters">
                 <button class="filter-btn active">Todos</button>
                 <button class="filter-btn">Esportivos</button>
@@ -153,7 +141,7 @@ if (!isset($_SESSION['cpf'])) {
     </main>
 
     <script>
-        // Simulação de interatividade com os botões de filtro
+      
         document.querySelectorAll('.filter-btn').forEach(button => {
             button.addEventListener('click', function() {
                 document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -163,7 +151,6 @@ if (!isset($_SESSION['cpf'])) {
             });
         });
         
-        // Simulação de interatividade com os botões de ação
         document.querySelectorAll('.action-btn.primary').forEach(button => {
             button.addEventListener('click', function() {
                 const carModel = this.closest('.car-card').querySelector('.car-model').textContent;

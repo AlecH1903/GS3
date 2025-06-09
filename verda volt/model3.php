@@ -14,530 +14,17 @@ $logado = isset($_SESSION['email']);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Model 3</title>
- 
+ <link rel="stylesheet" href="css/models.css">
   <link rel="stylesheet" href="css/carrossel.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-
-   <style>
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-   .nav-elegante {
-    background-color: #000;
-    padding: 15px 40px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-      border-bottom: 1px solid white; 
-  }
-
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    color: #fff;
-    font-weight: 300;
-    font-size: 1.5em;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-
-  .nav-links li a {
-    color: #fff;
-    font-weight: 300;
-    font-size: 1em;
-    text-decoration: none;
-    padding: 8px 0;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transition: width 0.3s ease;
-  }
-
-  .nav-links li a:hover,
-  .nav-links li a:focus {
-    color: #bbb;
-  }
-
-  .nav-links li a:hover::after,
-  .nav-links li a:focus::after {
-    width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    .nav-links {
-      gap: 15px;
-      font-size: 0.9em;
-    }
-  }
-  
-.dropdown {
-  position: relative;
-}
-
-
-.dropbtn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #fff;
-  font-weight: 300;
-  font-size: 1em;
-  text-decoration: none;
-  padding: 8px 0;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-
-.seta {
-  font-size: 0.6em;
-  line-height: 1;
-  transition: transform 0.3s ease;
-  display: inline-block;
-}
-
-
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #000;
-  border: 1px solid #444;
-  border-radius: 6px;
-  list-style: none;
-  padding: 8px 0;
-  margin: 8px 0 0 0;
-  min-width: 140px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-
-.submenu li a {
-  display: block;
-  padding: 8px 20px;
-  color: #fff;
-  font-weight: 300;
-  font-size: 0.95em;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 0.3s ease;
-}
-
-.submenu li a:hover {
-  background-color: #222;
-}
-
-
-.dropdown:hover .submenu,
-.dropdown:focus-within .submenu {
-  opacity: 1;
-  visibility: visible;
-}
-
-
-.dropdown:hover .seta,
-.dropdown:focus-within .seta {
-  transform: rotate(180deg);
-}
-
-
-.dropbtn::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  transition: width 0.3s ease;
-}
-
-.dropbtn:hover::after,
-.dropbtn:focus::after {
-  width: 100%;
-}
-
-    .main-layout {
-      padding-top: 70px;
-    }
-
-    .carousel-container {
-      position: relative;
-      max-width: 1000px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-      height: 500px;
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      position: relative;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .nav-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .nav-button:hover {
-      background: rgba(0, 0, 0, 0.8);
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .prev {
-      left: 20px;
-    }
-
-    .next {
-      right: 20px;
-    }
-
-    .info-section {
-      padding: 60px 20px;
-      background: linear-gradient(to bottom, #111, #000);
-    }
-
-    .div-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    .container {
-      background: #222;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .container h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #fff;
-    }
-
-    .section {
-      margin-bottom: 30px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #333;
-    }
-
-    .section h3 {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #ddd;
-    }
-
-    .container-lado {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    .item {
-      text-align: center;
-      flex: 1;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      margin: 0 5px;
-    }
-
-    .item h3 {
-      font-size: 24px;
-      color: #4dabf7;
-      margin-bottom: 5px;
-    }
-
-    .item p {
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    .options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .option-button {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 3px solid transparent;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .option-button::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
-    }
-
-    .option-button:hover,
-    .option-button.selected {
-      border-color: #4dabf7;
-      transform: scale(1.1);
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .wheel-button {
-      padding: 12px 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid transparent;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      color: #ddd;
-      font-weight: 500;
-    }
-
-    .wheel-button.selected,
-    .wheel-button:hover {
-      background: #4dabf7;
-      color: white;
-      border-color: #4dabf7;
-    }
-
-    #totalPrice {
-      text-align: center;
-      font-size: 36px;
-      margin: 30px 0;
-      color: #fff;
-      font-weight: bold;
-      text-shadow: 0 0 10px rgba(77, 171, 247, 0.5);
-    }
-
-    #buyButton {
-      display: block;
-      width: 100%;
-      padding: 18px;
-      background: linear-gradient(to right,rgb(0, 0, 0),rgb(34, 33, 33));
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(253, 253, 253, 0.4);
-    }
-
-    #buyButton:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(248, 248, 248, 0.6);
-    }
-
-    .car-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .car-title {
-      font-size: 48px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      background: linear-gradient(to right, #fff, #4dabf7);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .car-subtitle {
-      font-size: 24px;
-      color: #aaa;
-      margin-bottom: 30px;
-    }
-
-    .car-features {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .feature {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .feature i {
-      font-size: 36px;
-      color: #4dabf7;
-      margin-bottom: 15px;
-    }
-
-    .feature h4 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    .feature p {
-      color: #aaa;
-    }
-
-    .color-preview {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .preview-item {
-      text-align: center;
-    }
-
-    .preview-color {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .preview-item.active .preview-color {
-      border-color: #4dabf7;
-      transform: scale(1.1);
-      box-shadow: 0 0 15px rgba(77, 171, 247, 0.7);
-    }
-
-    .preview-item span {
-      display: block;
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    @media (max-width: 900px) {
-      .div-content {
-        grid-template-columns: 1fr;
-      }
-      
-      .carousel-track {
-        height: 400px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .carousel-track {
-        height: 300px;
-      }
-      
-      .container-lado {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .nav-links {
-        display: none;
-      }
-    }
-  </style>
-  
-
-
-
 <body>
-   <nav class="nav-elegante">
+  <nav class="nav-elegante">
  <div class="nav-container">
    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
    <ul class="nav-links">  
-     <li><a href="#sobrenos">Sobre Nós</a></li>
+     <li><a href="sobrenos.php">Sobre Nós</a></li>
      <li><a href="#carros">Carros</a></li>
      <li><a href="#variedades">Variedades</a></li> 
     
@@ -546,7 +33,8 @@ $logado = isset($_SESSION['email']);
         if(isset($_SESSION['nome'])){ ?>
            <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
-        <li><a href="perfil.php">Perfil<span ></span></a></li>
+      <li><a href="perfil.php">Perfil<span ></span></a></li>
+      <li><a href="inventario.php">Garagem<span ></span></a></li>
      <li><a href="code/logout.php">Sair<span ></span></a></li>
        <?php } else{ ?>
         <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
@@ -722,7 +210,6 @@ $logado = isset($_SESSION['email']);
       { id: 'black', name: 'All Black', price: 0, color: '#000' },
       { id: 'white', name: 'Black & White', price: 1500, color: '#fff', image: 'ms/dentrowhite.jpg' }
     ];
-     // Mapeamento de imagens para cores
     const exteriorImages = {
       pearl_white: {
         frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTS20,$PPSW,$WS91,$IBE00&view=FRONT34&model=ms&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
@@ -761,8 +248,6 @@ $logado = isset($_SESSION['email']);
       white: 'ms/dentrowhite.jpg'
     };
 
-    
-    // Função para atualizar as imagens do carrossel
     function updateCarImages() {
       const exterior = exteriorImages[selectedColor];
       
@@ -773,7 +258,6 @@ $logado = isset($_SESSION['email']);
       document.getElementById('slide-interior').src = interiorImages[selectedInterior];
     }
 
-    // Carrossel functions
     function moveToSlide(index) {
       const track = document.querySelector('.carousel-track');
       track.style.transform = `translateX(-${index * 100}%)`;
@@ -864,7 +348,6 @@ function updateSpecs() {
     function updateCarImages() {
   const exterior = exteriorImages[selectedColor];
   
-  // Atualiza os slides do carrossel
   document.querySelector('.carousel-slide:nth-child(1) img').src = exterior.frontal;
   document.querySelector('.carousel-slide:nth-child(2) img').src = exterior.lateral;
   document.querySelector('.carousel-slide:nth-child(3) img').src = exterior.traseira;
@@ -872,14 +355,13 @@ function updateSpecs() {
   document.querySelector('.carousel-slide:nth-child(5) img').src = interiorImages[selectedInterior];
 }
 
-// Modificação nas funções de callback para cores e interior
 createButtons([
   { id: 'rwd', name: 'RWD' },
   { id: 'long_range', name: 'Long Range' },
   { id: 'performance', name: 'Performance' }
 ], 'modelButtons', (id) => {
   selectedModel = id;
-  // Verifica compatibilidade das rodas
+
   if (selectedWheel === '20' && id !== 'performance') {
     alert('As rodas Überturbine estão disponíveis apenas para o modelo Performance.');
     selectedWheel = '18';
@@ -890,7 +372,7 @@ createButtons([
 
 createButtons(colorOptions, 'colorOptions', (id) => {
   selectedColor = id;
-  updateCarImages(); // Atualiza imagens ao selecionar cor
+  updateCarImages(); 
 }, true);
 
 createButtons(wheelOptions, 'wheelsButtons', (id) => {
@@ -900,7 +382,7 @@ createButtons(wheelOptions, 'wheelsButtons', (id) => {
 
 createButtons(interiorOptions, 'interiorOptions', (id) => {
   selectedInterior = id;
-  updateCarImages(); // Atualiza imagens ao selecionar interior
+  updateCarImages(); 
 }, true);
 
 updateCarImages();
@@ -910,14 +392,12 @@ updateCarImages();
     return;
   }
 
-  // Calcula novamente o total
   let total = basePrices[selectedModel];
   total += colorOptions.find(o => o.id === selectedColor).price;
   total += interiorOptions.find(o => o.id === selectedInterior).price;
   const wheel = wheelOptions.find(o => o.id === selectedWheel);
   total += wheel.price;
 
-  // Cria os dados para enviar
   const dados = new URLSearchParams();
   dados.append("modelo", selectedModel + "3");
   dados.append("cor", selectedColor);
@@ -934,7 +414,7 @@ updateCarImages();
   })
   .then(response => response.text())
   .then(data => {
-    alert("Compra realizda com sucesso!"); // Pode ser mensagem de sucesso do PHP
+    alert("Compra realizda com sucesso!"); 
   })
   .catch(error => {
     console.error("Erro ao enviar os dados:", error);

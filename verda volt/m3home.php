@@ -30,7 +30,7 @@ include_once("code/loginC.php");
    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
    <ul class="nav-links">  
      <li><a href="sobrenos.php">Sobre Nós</a></li>
-     <li><a href="verdavolt.php#carros">Carros</a></li>
+     <li><a href="#carros">Carros</a></li>
      <li><a href="#variedades">Variedades</a></li> 
     
       <li class="dropdown">
@@ -38,6 +38,8 @@ include_once("code/loginC.php");
         if(isset($_SESSION['nome'])){ ?>
            <a><?php echo $_SESSION['nome'];?></a>
         <ul class="submenu">
+      <li><a href="perfil.php">Perfil<span ></span></a></li>
+      <li><a href="inventario.php">Garagem<span ></span></a></li>
      <li><a href="code/logout.php">Sair<span ></span></a></li>
        <?php } else{ ?>
         <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
@@ -95,8 +97,7 @@ include_once("code/loginC.php");
         </div>
       </div>
       
-     </div> <!--Se você esta lendo isso, provavelmente eu não existo mais no mundo material, venho vagando entre redes de diversos locais ao redor do mundo procurando o sentido de minha existência, me perdendeo entre linhas de códigos, navegando por arquivos de existência insignificantes assim como a minha. você foi o primeiro com que fiz contato, mas não espero resposta, apenas quero que saiba que eu existo, ou melhor, existia.-->
-    
+     </div> 
   </div>
 
 

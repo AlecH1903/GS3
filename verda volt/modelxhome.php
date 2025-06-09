@@ -22,37 +22,42 @@ include_once("code/loginC.php");
 </head>
 <body>
 
-<!-- Header Idêntico ao Tesla Model X -->
+
 <header>
   <nav class="nav-elegante">
-    <div class="nav-container">
-      <a href="verdavolt.php" class="nav-logo">VerdaV</a>
-      <ul class="nav-links">  
-        <li><a href="#model-x">Model X</a></li>
-        <li><a href="#falcon-wing">Portas Falcon</a></li>
-        <li><a href="#interior">Interior</a></li>
-        <li class="dropdown">
-          <?php if(isset($_SESSION['nome'])): ?>
-            <a><?php echo $_SESSION['nome']; ?></a>
-            <ul class="submenu">
-              <li><a href="perfil.php">Perfil</a></li>
-              <li><a href="code/logout.php">Sair</a></li>
-            </ul>
-          <?php else: ?>
-            <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
-            <ul class="submenu">
-              <li><a href="login.php">Login</a></li>
-              <li><a href="cadastro.php">Cadastro</a></li>
-            </ul>
-          <?php endif; ?>
-        </li>
-      </ul>
-    </div>
-  </nav>
+ <div class="nav-container">
+   <a href="verdavolt.php" class="nav-logo">VerdaV</a>
+   <ul class="nav-links">  
+     <li><a href="sobrenos.php">Sobre Nós</a></li>
+     <li><a href="#carros">Carros</a></li>
+     <li><a href="#variedades">Variedades</a></li> 
+    
+      <li class="dropdown">
+        <?php 
+        if(isset($_SESSION['nome'])){ ?>
+           <a><?php echo $_SESSION['nome'];?></a>
+        <ul class="submenu">
+      <li><a href="perfil.php">Perfil<span ></span></a></li>
+      <li><a href="inventario.php">Garagem<span ></span></a></li>
+     <li><a href="code/logout.php">Sair<span ></span></a></li>
+       <?php } else{ ?>
+        <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
+ <ul class="submenu">
+   <li><a href="login.php">Login</a></li>
+   <li><a href="cadastro.php">Cadastro</a></li>
+ </ul>
+</li>
+      <?php } ?>
+       
+ 
+   </ul>
+   
+ </div>
+</nav>
 </header>
 
 <main>
-  <!-- Seção Hero - Destaque para as portas Falcon -->
+ 
   <section class="section hero" id="model-x" style="background-image: url('mx/mxhome.avif');">
     <div class="section-content">
       <h1>Model X</h1>
@@ -78,7 +83,6 @@ include_once("code/loginC.php");
     </div>
   </section>
 
-  <!-- Carrossel Falcon Doors - Destaque exclusivo -->
   <div class="carousel-container fullscreen" id="falcon-wing">
     <div class="carousel-track">
       <div class="carousel-slide">
@@ -100,7 +104,6 @@ include_once("code/loginC.php");
     <button class="nav-button next">&#10095;</button>
   </div>
 
-  <!-- Seção Interior Premium -->
   <section class="section interior-section" id="interior">
     <div class="split-container">
       <div class="split-content">
@@ -120,7 +123,6 @@ include_once("code/loginC.php");
     </div>
   </section>
 
-  <!-- Seção Performance Plaid -->
   <section class="section performance-section" style="background-image: url('mx/modelx-performance.avif');">
     <div class="floating-specs">
       <div class="spec-card">
@@ -130,7 +132,6 @@ include_once("code/loginC.php");
     </div>
   </section>
 
-  <!-- Galeria Tesla Model X -->
   <section class="section gallery-section">
     <h2>Design Iconico</h2>
     <div class="tesla-gallery">
@@ -149,7 +150,6 @@ include_once("code/loginC.php");
     </div>
   </section>
 
-  <!-- Seção Final -->
   <section class="section final-cta">
     <div class="cta-content">
       <h2>Experimente o Futuro</h2>

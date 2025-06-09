@@ -20,22 +20,32 @@ $ultimos_dois = substr($user['cpf'], -2);
 
 <header>
  <nav class="nav-elegante">
-  <div class="nav-container">
-    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
-    <ul class="nav-links"></ul>
-  </div>
+ <div class="nav-container" >
+   <a href="verdavolt.php" class="nav-logo">VerdaV</a>
+   <ul class="nav-links" style="margin-left: 55em;">  
+      
+    
+      <li class="dropdown">
+        <?php 
+        if(isset($_SESSION['nome'])){ ?>
+           <a><?php echo $_SESSION['nome'];?></a>
+        <ul class="submenu">
+      <li><a href="inventario.php">Garagem<span ></span></a></li>
+     <li><a href="code/logout.php">Sair<span ></span></a></li>
+       <?php } ?>
+ </ul>
+        </li>
+       
+ 
+   </ul>
+   
+ </div>
 </nav>
 </header>
 
 <div class="user-wrapper">
   <div class="container">
-    <h1>Perfil do Usuário</h1>
-    
-    <?php if ($sucesso): ?>
-      <div class="alert alert-success">
-        Dados atualizados com sucesso!
-      </div>
-    <?php endif; ?>
+   
     
     <?php if (!empty($erros)): ?>
       <div class="alert alert-error">
@@ -44,7 +54,7 @@ $ultimos_dois = substr($user['cpf'], -2);
         <?php endforeach; ?>
       </div>
     <?php endif; ?>
-
+  
   <style>
     body {
       margin: 0;
@@ -52,10 +62,10 @@ $ultimos_dois = substr($user['cpf'], -2);
       background-color: #f4f4f4;
     }
     .profile-container {
-      max-width: 600px;
-      margin: 60px auto;
+      max-width: 400px;
+      margin: 60px 400px;
       background: #fff;
-      padding: 90px;
+      padding: 40px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
       text-align: center;
@@ -124,13 +134,21 @@ $ultimos_dois = substr($user['cpf'], -2);
     }
   </style>
 </head>
-<body>
-  <form action="perfil.php" method="POST" enctype="multipart/form-data" class="profile-container">
+<body> <h1 style="margin-left: 13.5em;">Perfil do Usuário</h1>
+<?php if($_SESSION['assinante'] == true){?> 
+<h2 style=" top:22em; margin-left: 17em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      background: linear-gradient(to left, #fff,rgba(111, 111, 243, 0.45));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;">Membro Verda</h2> <?php } ?>
+  <form action="perfil.php" method="POST" enctype="multipart/form-data" class="profile-container"> 
   <img src="<?= $fotoSrc ?>" alt="Foto de Perfil" class="profile-img" id="profilePic">
 
   <div class="edit-photo">
     <label for="photoUpload">Alterar Foto</label>
-   <button name="foto"> <input type="file" id="photoUpload" name="foto" accept="image/*"> </button>
+   <button name="foto"> <input type="file" id="photoUpload" name="foto" accept="image/*"> </button> </input>
   </div>
 
   <div class="user-info" id="userInfo">
@@ -180,8 +198,7 @@ $ultimos_dois = substr($user['cpf'], -2);
     function hideEditForm() {
       document.getElementById('editForm').style.display = 'none';
     }
-
-    // Preview de imagem
+    //preview da img!
     document.getElementById('photoUpload').addEventListener('change', function(event) {
   const file = event.target.files[0];
   if (file) {

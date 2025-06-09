@@ -81,7 +81,6 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
     </div>
   </div>
 
-    <!-- Telão -->
     <div class="telao-container">
     <img id="imagem-telao" src="IMAGENS/tesla_model_y.png" alt="Imagem principal do telão">
 </div>
@@ -137,7 +136,7 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
 
 
     <div id="variedades" class="heroes-wrapper">
-    <!-- First card -->
+
     <div class="hero-card">
       <div class="hero-text">
         <h2>Projeto Meio Ambiente</h2>
@@ -148,7 +147,6 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
       </div>
     </div>
 
-    <!-- Second card -->
     <div class="hero-card">
       <div class="hero-text">
         <h2>Compare Nossos Modelos</h2>

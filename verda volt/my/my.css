@@ -1,12 +1,10 @@
 
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Variáveis de tema */
     :root {
       --bg-color: #000;
       --text-color: #fff;
@@ -102,12 +100,10 @@
       }
     }
 
-    /* Dropdown container */
     .dropdown {
       position: relative;
     }
 
-    /* Link principal do dropdown */
     .dropbtn {
       cursor: pointer;
       display: flex;
@@ -122,7 +118,6 @@
       transition: color 0.3s ease;
     }
 
-    /* Seta ao lado do texto */
     .seta {
       font-size: 0.6em;
       line-height: 1;
@@ -130,7 +125,6 @@
       display: inline-block;
     }
 
-    /* Submenu escondido por padrão */
     .submenu {
       position: absolute;
       top: 100%;
@@ -149,7 +143,6 @@
       z-index: 10;
     }
 
-    /* Itens do submenu */
     .submenu li a {
       display: block;
       padding: 8px 20px;
@@ -165,20 +158,17 @@
       background-color: #222;
     }
 
-    /* Mostrar submenu ao passar o mouse */
     .dropdown:hover .submenu,
     .dropdown:focus-within .submenu {
       opacity: 1;
       visibility: visible;
     }
 
-    /* Seta rotaciona ao abrir */
     .dropdown:hover .seta,
     .dropdown:focus-within .seta {
       transform: rotate(180deg);
     }
 
-    /* Mantém a linha embaixo do texto no hover do link principal */
     .dropbtn::after {
       content: '';
       position: absolute;
@@ -205,7 +195,6 @@
       transition: background-color 0.3s ease;
     }
 
-    /* Seções */
     .section {
       width: 100%;
       min-height: 100vh;
@@ -296,7 +285,6 @@
       margin-bottom: 30px;
     }
 
-    /* Botões */
     .buttons {
       display: flex;
       gap: 20px;
@@ -355,7 +343,6 @@
       color: #333;
     }
 
-    /* Responsivo */
     @media (max-width: 1024px) {
       .galeria-item {
         width: calc(50% - 20px);
@@ -476,7 +463,7 @@
 
 .galeria-item img {
   width: 100%;
-  height: 620px; /* Ajuste conforme necessário */
+  height: 620px;
   object-fit: cover;
   
   gap: 3px;
@@ -487,7 +474,7 @@
   font-size: 1em;
   color: #333;
 }
- /* Seção principal */
+ 
         .feature-section {
             background-color: #f5f5f5;
             padding: 80px 20px;
@@ -513,7 +500,6 @@
             margin: 0 auto;
         }
 
-        /* Cards */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -576,7 +562,6 @@
             transform: translateX(5px);
         }
 
-        /* Responsivo */
         @media (max-width: 768px) {
             .features-grid {
                 grid-template-columns: 1fr;

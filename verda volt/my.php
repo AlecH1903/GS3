@@ -17,31 +17,36 @@ include_once("code/loginC.php");
 <body>
 
 <header>
-  <nav class="nav-elegante">
-    <div class="nav-container">
-      <a href="verdavolt.php" class="nav-logo">VerdaV</a>
-      <ul class="nav-links">  
-        <li><a href="#model-y">Model Y</a></li>
-        <li><a href="#especificacoes">Especificações</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li class="dropdown">
-          <?php if(isset($_SESSION['nome'])): ?>
-            <a><?php echo $_SESSION['nome']; ?></a>
-            <ul class="submenu">
-              <li><a href="perfil.php">Perfil</a></li>
-              <li><a href="code/logout.php">Sair</a></li>
-            </ul>
-          <?php else: ?>
-            <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
-            <ul class="submenu">
-              <li><a href="login.php">Login</a></li>
-              <li><a href="cadastro.php">Cadastro</a></li>
-            </ul>
-          <?php endif; ?>
-        </li>
-      </ul>
-    </div>
-  </nav>
+ <nav class="nav-elegante">
+ <div class="nav-container">
+   <a href="verdavolt.php" class="nav-logo">VerdaV</a>
+   <ul class="nav-links">  
+     <li><a href="sobrenos.php">Sobre Nós</a></li>
+     <li><a href="#carros">Carros</a></li>
+     <li><a href="#variedades">Variedades</a></li> 
+    
+      <li class="dropdown">
+        <?php 
+        if(isset($_SESSION['nome'])){ ?>
+           <a><?php echo $_SESSION['nome'];?></a>
+        <ul class="submenu">
+      <li><a href="perfil.php">Perfil<span ></span></a></li>
+      <li><a href="inventario.php">Garagem<span ></span></a></li>
+     <li><a href="code/logout.php">Sair<span ></span></a></li>
+       <?php } else{ ?>
+        <a href="#">Login/Cadastro <span class="seta">&#9660;</span></a>
+ <ul class="submenu">
+   <li><a href="login.php">Login</a></li>
+   <li><a href="cadastro.php">Cadastro</a></li>
+ </ul>
+</li>
+      <?php } ?>
+       
+ 
+   </ul>
+   
+ </div>
+</nav>
 </header>
 
 <main>
@@ -216,7 +221,6 @@ include_once("code/loginC.php");
       showSlide(index);
     });
 
-    // Auto slide
     setInterval(() => {
       index = (index + 1) % slides.length;
       showSlide(index);

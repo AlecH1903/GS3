@@ -1,6 +1,6 @@
 <?php
 include_once("code/loginC.php");
-include_once("code/conexao.php"); // conexão já deve fornecer $conexao
+include_once("code/conexao.php"); 
 
 if (!isset($_SESSION['cpf'])) {
     echo "Usuário não autenticado.";
@@ -38,7 +38,7 @@ $stmtInsert = mysqli_prepare($conexao, $sqlInsert);
 mysqli_stmt_bind_param($stmtInsert, "sssssd", $cpf, $modelo, $cor, $rodas, $interior, $preco);
 
 if (mysqli_stmt_execute($stmtInsert)) {
-    // Compra inserida com sucesso, agora incrementa o contador
+   
     $sqlUpdateCompras = "UPDATE usuarios SET compras = compras + 1 WHERE cpf = ?";
     $stmtUpdate = mysqli_prepare($conexao, $sqlUpdateCompras);
     mysqli_stmt_bind_param($stmtUpdate, "s", $cpf);
