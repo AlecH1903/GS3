@@ -135,7 +135,7 @@ $ultimos_dois = substr($user['cpf'], -2);
   </style>
 </head>
 <body> <h1 style="margin-left: 13.5em;">Perfil do Usuário</h1>
-<?php if($_SESSION['assinante'] == true){?> 
+<?php if(isset($_SESSION['assinante'])){?> 
 <h2 style=" top:22em; margin-left: 17em;
       font-weight: bold;
       margin-bottom: 20px;
