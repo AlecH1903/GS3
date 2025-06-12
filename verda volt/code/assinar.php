@@ -17,7 +17,10 @@ if($resultadosql){
 
      $row = mysqli_fetch_assoc($resultadosql);
 
-     if($row['assinatura'] == 0){
+     if($row['assinante'] == 0){
+
+        
+
     $sql_usuario = "UPDATE usuarios SET assinante = 1 WHERE cpf = '$id_usuario'";
         mysqli_query($conexao, $sql_usuario);
         
