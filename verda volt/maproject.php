@@ -102,17 +102,35 @@ include("code/assinar.php");
   </section>
 
   <section class="content">
-    <h2>Programa Meio Ambiente</h2>
-    <p>
-      Nós da Verda Volt, sempre nos preocupamos com o meio-ambiente, e com isso, não poderíamos deixar de <br>
-      investirmos na preservação e expansão de áreas verdes.
-    </p>
+  <h2>Programa Meio Ambiente</h2>
+  <p>
+    Na <strong>Verda Volt</strong>, acreditamos que cada escolha pode transformar o futuro. O <strong>Programa Meio Ambiente</strong> 
+    nasceu do nosso compromisso com um mundo mais verde, mais limpo e mais consciente.
+  </p>
 
-    <h2>Como funciona</h2>
-    <p>
-      Os contribuinte do projeto meio ambiente, assinando nosso projeto, receberão seguro e manutenção gratuíta, em troca, com a <br>
-      verba adquirida, iremos investir em áreas verdes e projetos para o meio-ambiente.
-    </p>
+  <p>
+    Ao assinar o programa, você não está apenas adquirindo benefícios exclusivos — está se unindo a uma causa que investe diretamente 
+    na <strong>preservação de florestas, reflorestamento urbano</strong> e <strong>educação ambiental</strong>. 
+    Parte de cada assinatura é destinada a projetos reais, auditados, que impactam positivamente nosso planeta.
+  </p>
+
+  <h2>Benefícios para você</h2>
+  <ul>
+    <li><strong>Manutenção gratuita</strong> do seu veículo elétrico Verda Volt.</li>
+    <li><strong>Seguro completo</strong> incluso durante o período de assinatura.</li>
+    <li><strong>10% de desconto</strong> aplicado automaticamente ao valor base dos nossos modelos.</li>
+    <li>Prioridade em lançamentos e acesso antecipado a novas tecnologias.</li>
+  </ul>
+
+  <h2>Impacto coletivo</h2>
+  <p>
+    Cada assinante torna possível a criação de novos espaços verdes em áreas urbanas degradadas, a recuperação de 
+    ecossistemas nativos e a promoção de eventos educacionais sobre sustentabilidade em escolas públicas.
+  </p>
+
+  <p style="font-style: italic; color: #0070f3;">
+    Quanto mais pessoas assinarem, maior será o alcance do impacto positivo que podemos gerar juntos.
+  </p>
 <form action="maproject.php" method="POST">
     <button type="submit" name="btnma" class="btn-subscribe">
         <?php echo (isset($_SESSION['assinante']) ? 'Assinatura Ativa' : 'Assine Agora'); ?>

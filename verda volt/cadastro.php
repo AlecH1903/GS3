@@ -38,7 +38,7 @@ include_once("code/conexao.php");
       <input type="text" id="nome" name="nome" required>
 
       <label for="cpf">CPF</label>
-      <input type="text" id="cpf" name="cpf" required maxlength="14" oninput="this.value = this.value.replace(/[^0-9]/g, '')" >
+      <input type="text" id="cpf" name="cpf" required maxlength="14" oninput="formatarCPF(this)">
 
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
@@ -47,7 +47,7 @@ include_once("code/conexao.php");
       <input type="date" id="idade" name="idade" min="0" required>
 
       <label for="telefone">Número de Telefone</label>
-      <input type="tel" id="telefone" name="telefone" required>
+      <input type="tel" id="telefone" name="telefone" required oninput="formatarnumero(this)">
 
       <label for="senha">Senha</label>
       <input type="password" id="senha" name="senha" required>
@@ -88,6 +88,33 @@ include_once("code/conexao.php");
         toggleIcon.classList.add('fa-eye');
       }
     }
+
+    
+function formatarCPF(campo) {
+  let cpf = campo.value.replace(/\D/g, ''); // Remove tudo que não for número
+
+  if (cpf.length > 11) cpf = cpf.slice(0, 11); // Limita a 11 dígitos
+
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+  campo.value = cpf;
+}
+
+function formatarnumero(campo) {
+  let numero = campo.value.replace(/\D/g, ''); // Remove tudo que não for número
+
+  if (numero.length > 11) numero = numero.slice(0, 11); // Limita a 11 dígitos
+
+  numero = numero.replace(/(\d{0})(\d)/, '$1($2');
+  numero = numero.replace(/(\d{2})(\d)/, '$1) $2');
+  numero = numero.replace(/(\d{4})(\d{2,4})$/, '$1-$2');
+
+  campo.value = numero;
+}
+</script>
+
   </script>
 
 </body>

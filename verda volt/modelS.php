@@ -170,10 +170,14 @@ $logado = isset($_SESSION['email']);
             <h3>Interior</h3>
             <div class="options" id="interiorOptions"></div>
           </div>
-
-          <div id="totalPrice">R$ 64.000</div>
+          <?php if(isset($_SESSION['assinante']) && $_SESSION['assinante'] == 1){ ?>
+          <div id="totalPrice">R$57.600</div>
           <button id="buyButton">Comprar Agora</button>
         </div>
+        <?php } else{ ?>
+          <div id="totalPrice">R$64.000</div>
+          <button id="buyButton">Comprar Agora</button>
+        </div> <?php } ?>
       </div>
     </section>
   </div>
@@ -182,12 +186,19 @@ $logado = isset($_SESSION['email']);
      <script > 
      
      const logado = <?= json_encode($logado); ?>;
-
+        <?php if(isset($_SESSION['assinante']) && $_SESSION['assinante'] == 1){ ?>
      const basePrices = {
+      rwd: 64000 - 64000 * 10 / 100 ,
+      long_range: 72000 - 72000 * 10 / 100,
+      performance: 84000 - 84000 * 10 / 100
+    };  <?php } else{ ?>
+
+      const basePrices = {
       rwd: 64000,
       long_range: 72000,
       performance: 84000
-    };
+    }; <?php } ?>
+
      const modelSpecs = {
                 rwd: {
                     alcance: '410mi',

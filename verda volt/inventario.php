@@ -150,21 +150,6 @@ if (!isset($_SESSION['cpf'])) {
             });
         });
         
-        document.querySelectorAll('.action-btn.primary').forEach(button => {
-            button.addEventListener('click', function() {
-                const carModel = this.closest('.car-card').querySelector('.car-model').textContent;
-                alert(`Detalhes do ${carModel} serão exibidos!`);
-            });
-        });
-        
-        document.querySelectorAll('.action-btn.secondary').forEach(button => {
-            button.addEventListener('click', function() {
-                const carModel = this.closest('.car-card').querySelector('.car-model').textContent;
-                if(confirm(`Tem certeza que deseja vender seu ${carModel}?`)) {
-                    alert(`${carModel} colocado à venda!`);
-                }
-            });
-        });
     </script>
 </body>
 </html>
