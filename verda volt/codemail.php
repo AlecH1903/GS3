@@ -41,14 +41,16 @@ include("code/conexao.php");
 
       <div class="form-group">
         <label for="email">Código</label>
-        <input type="text" id="code" name="code" placeholder="Insira o código" maxlength="6" required oninput="formatarCODE(this)" />
+        <input type="text" id="code" name="code" placeholder="Insira o código" maxlength="6"  oninput="formatarCODE(this)" />
       </div>
 
       <button type="submit" class="btn-entrar" name="btncode">Enviar</button>
 
       <div class="login-footer">
         <span>Não possui uma conta?</span>
-        <a href="cadastro.php">Cadastre-se</a>
+        <a href="cadastro.php">Cadastre-se</a> <br>
+        <span>Não recebeu o código?</span>
+        <button type="submit" Style="background-color: transparent; color: white; border: none" name="reenviar"> <a > Reenviar </a> </button>
       </div>
 
       <div class="error-msg">
