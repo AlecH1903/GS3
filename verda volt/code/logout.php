@@ -4,7 +4,7 @@ session_unset();
 session_destroy();         // pega e destrou a sessão
 
 
-header("Location: /verda volt/verdavolt.php");
+header("Location: /dashboard/verda volt/verdavolt.php");
 exit();
 
 
