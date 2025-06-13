@@ -54,6 +54,8 @@ include("code/conexao.php");
       <div class="login-footer">
         <span>Não possui uma conta?</span>
         <a href="cadastro.php">Cadastre-se</a>
+           <br>
+        <a href="recuperaçao.php"><span>Esqueceu sua senha?</span></a>
       </div>
 
       <div class="error-msg">
