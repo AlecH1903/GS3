@@ -85,6 +85,54 @@ if(isset($_POST['btncode'])){
      
       }
 
+      if(isset($_POST['reenviar'])){
+    
+        
+
+        $codigo =  random_int(100000, 999999);
+  $mail = new PHPMailer(true); // 'true' ativa o modo de exceção
+  $_SESSION['codigo_email'] = $codigo;
+$email = $_SESSION['email'];
+
+try {
+    // Configuração do servidor SMTP
+    $mail->isSMTP();                                      // Usar SMTP
+    $mail->Host       = 'smtp.gmail.com';                 // Servidor SMTP do Gmail
+    $mail->SMTPAuth   = true;                             // Habilitar autenticação
+    $mail->Username   = 'voltverda@gmail.com';            // usar email do  Gmail
+    $mail->Password   = 'xfnn fast kscs vgxv';            // Senha de app do Gmail (NÃO é a senha normal)
+    $mail->SMTPSecure = 'tls';                           
+    $mail->Port       = 587;                              // Porta SMTP do Gmail
+
+
+    $mail->setFrom('voltverda@gmail.com', 'VerdaV');    // Quem envia
+    $mail->addAddress(''. $email . '');        // Quem recebe
+
+    // Conteúdo do e-mail
+    $mail->isHTML(true);                                  // Enviar em HTML
+    $mail->Subject = 'Redefinir Senha';
+    $mail->Body    = '<b>Olá!</b> ' . $usuario['nome'] .' Você solicitou validação do e-mail pessoal da sua conta de acesso VerdaVolt <br>
+
+Um novo código de validação do e-mail pessoal (PIN de segurança) foi criado. <br> 
+
+Esse código de validação é importante para verificar a existência do seu e-mail, dessa forma, por exemplo, ficará mais fácil redefinir a sua senha de acesso, caso você a perca. <br> 
+
+Se você não solicitou esta alteração, recomendamos que altere sua senha. Em caso de maiores esclarecimentos, acesse <br> 
+
+<br> Se foi você mesmo quem solicitou a criação do código de validação do e-mail, digite-o na tela "Digite o código de validação enviado para o email informado. <br>
+ <h1 style="align-text: center;">' . $_SESSION['codigo_email'] . '</h1>';
+
+    // Envia o e-mail
+    $mail->send();
+}catch (Exception $e) {
+    echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
+}}
+ 
+
+
+
+
+
 if (isset($_POST['btnSalvar'])) {
     $novaSenha = $_POST['senha'];
     $confirmarSenha = $_POST['confirmarSenha'];
