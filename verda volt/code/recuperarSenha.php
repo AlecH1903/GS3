@@ -45,8 +45,6 @@ Se você não solicitou esta alteração, recomendamos que altere sua senha. Em 
 <br> Se foi você mesmo quem solicitou a criação do código de validação do e-mail, digite-o na tela "Digite o código de validação enviado para o email informado. <br>
  <h1 style="align-text: center;">' . $_SESSION['codigo_email'] . '</h1>';
 
-    $mail->AltBody = 'Olá! Este é um e-mail de testessss  (versão texto).';
-
     // Envia o e-mail
     $mail->send();
     header("Location: codemail.php");
