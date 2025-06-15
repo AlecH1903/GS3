@@ -76,7 +76,7 @@ if(isset($_POST['btncode'])){
           header("Location: redefinirSenha.php");
       } else{
           $erros[] = "Código inválido";  $_SESSION['tentativa']++;
-          var_dump($_SESSION['tentativa']);
+         
       }if($_SESSION['tentativa'] > 3){
           $_SESSION['bloqueado_ate'] = time() + 600; // bloqueia por 10 minutos
             session_write_close(); //até onde vi, era pra garantir q salva, ver mais já já!
