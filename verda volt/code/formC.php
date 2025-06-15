@@ -11,6 +11,10 @@ $email = $_POST["email"];
 $idade = $_POST["idade"];
 $ntelefone = $_POST["telefone"];
 $senha = $_POST["senha"];
+$idade = date('Y') - date('Y', strtotime($idade));
+if ($idade < 18 ) {
+ $erros [] = "você precisa ser maior de idade";
+}
 
 //verifica se a senha possui menos de 6 números
 if (strlen($senha) < 6) {
