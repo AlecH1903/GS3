@@ -283,3 +283,13 @@ body {
 .back-button:hover {
   color: var(--btn-hover);
 }
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px auto;
+    max-width: 400px;
+    text-align: center;
+    top: 2em;
+}
