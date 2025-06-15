@@ -20,7 +20,7 @@ O sistema permite ao usuário:
 
 ✅ Cadastro de Usuário  
 ✅ Login com senha criptografada (`password_hash`)  
-✅ Recuperação de senha com código por e-mail  
+✅ Recuperação de senha com envio real de código por e-mail  
 ✅ Upload de foto de perfil  
 ✅ Edição de dados pessoais  
 ✅ Garagem com histórico de compras  
@@ -90,6 +90,14 @@ O sistema permite ao usuário:
 | `assinaturas` | Controle de status, datas e status da assinatura |
 | `carros_info` | Informações sobre os modelos de carros |
 | `compras` | Histórico de compras de cada usuário |
+
+Principais características do banco:
+
+- Uso de chaves estrangeiras
+
+- Uso de auto-incremento
+
+- Integridade referencial garantida
 
 ---
 
