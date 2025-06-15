@@ -23,7 +23,7 @@ include_once("code/loginC.php");
    <ul class="nav-links">  
      <li><a href="sobrenos.php">Sobre Nós</a></li>
      <li><a href="verdavolt.php#carros">Carros</a></li>
-     <li><a href="#variedades">Variedades</a></li> 
+     <li><a href="verdavolt.php#variedades">Variedades</a></li> 
     
       <li class="dropdown">
         <?php 
@@ -136,10 +136,10 @@ Enquanto carros a combustão liberam CO₂, NOx (óxidos de nitrogênio) e mater
   <footer class="footer">
   <div class="footer-container">
     <div class="footer-links">
-      <a href="verdavolt.html">Verda Volt © 2025</a>
+      <a href="verdavolt.php">Verda Volt © 2025</a>
       <a href="sobrenos.php">Um pouco sobre nós</a>
-      <a href="#carros">Carros</a>
-      <a href="#variedades">Variedades</a>
+      <a href="verdavolt.php#carros">Carros</a>
+      <a href="verdavolt.php#variedades">Variedades</a>
     </div>
   </div>
 </footer>

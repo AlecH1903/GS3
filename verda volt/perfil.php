@@ -3,6 +3,7 @@
 include("code/loginC.php");
 include("code/conexao.php");
 include("code/perfilcode.php");
+include("code/cancelar.php");
 $ultimos_dois = substr($user['cpf'], -2);
 
 ?>
@@ -142,7 +143,9 @@ $ultimos_dois = substr($user['cpf'], -2);
       background: linear-gradient(to left, #fff,rgba(111, 111, 243, 0.45));
       -webkit-background-clip: text;
       background-clip: text;
-      color: transparent;">Membro Verda</h2> <?php } ?>
+      color: transparent;">Membro Verda</h2>
+      
+      <?php } ?>
   <form action="perfil.php" method="POST" enctype="multipart/form-data" class="profile-container"> 
   <img src="<?= $fotoSrc ?>" alt="Foto de Perfil" class="profile-img" id="profilePic">
 
@@ -162,7 +165,24 @@ $ultimos_dois = substr($user['cpf'], -2);
     <p><span class="label">Telefone:</span> <?= htmlspecialchars($user['telefone']) ?></p>
   </div>
 
+  <div style="  display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;" class="button-container">
   <button type="button" class="edit-button" onclick="showEditForm()">Alterar Dados</button>
+  <?php if(isset($_SESSION['assinante'])): ?>
+        <form style="margin: 0;" action="code/cancelar.php" method="post" class="cancel-form">
+            <button type="submit" name="cancelar_assinatura" class="cancel-button">Cancelar Assinatura</button>
+        </form>
+    <?php endif; ?>
+</div>
+
+<?php
+if (isset($_SESSION['mensagem'])) {
+    echo '<div class="alert alert-success">' . $_SESSION['mensagem'] . '</div>';
+    unset($_SESSION['mensagem']);
+}
+?>
 
   <div class="edit-form" id="editForm" style="display:none;">
     <input type="text" id="nome" name="nome" placeholder="Nome" value="<?= htmlspecialchars($user['nome']) ?>" required>

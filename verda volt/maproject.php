@@ -69,8 +69,8 @@ include("code/assinar.php");
    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
    <ul class="nav-links">  
      <li><a href="sobrenos.php">Sobre Nós</a></li>
-     <li><a href="#carros">Carros</a></li>
-     <li><a href="#variedades">Variedades</a></li> 
+     <li><a href="verdavolt.php">Carros</a></li>
+     <li><a href="verdavolt.php">Variedades</a></li> 
     
       <li class="dropdown">
         <?php 
@@ -128,6 +128,11 @@ include("code/assinar.php");
     ecossistemas nativos e a promoção de eventos educacionais sobre sustentabilidade em escolas públicas.
   </p>
 
+  <p>
+    Com apenas 5.000 ao ano, você ajuda o meio ambiente e pode sempre usufruir o máximo possível do seu verda. 
+    Cancele quando quiser!
+  </p>
+
   <p style="font-style: italic; color: #0070f3;">
     Quanto mais pessoas assinarem, maior será o alcance do impacto positivo que podemos gerar juntos.
   </p>
@@ -143,8 +148,8 @@ include("code/assinar.php");
     <div class="footer-links">
       <a href="verdavolt.html">Verda Volt © 2025</a>
       <a href="sobrenos.php">Um pouco sobre nós</a>
-      <a href="#carros">Carros</a>
-      <a href="#variedades">Variedades</a>
+      <a href="verdavolt#carros">Carros</a>
+      <a href="verdavolt#variedades">Variedades</a>
     </div>
   </div>
 </footer>

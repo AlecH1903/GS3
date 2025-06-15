@@ -101,7 +101,7 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
         <div class="slide-content">
           <h1>Model S</h1>
           <p>Acelere de 0 a 100 km/h em 2.1s com autonomia de 650 km.</p>
-           <a class="exbtn" href="#">Saiba mais</a>
+           <a class="exbtn" href="mshome.php">Saiba mais</a>
         </div>
       </div>
       <div class="carousel-slide">
@@ -109,7 +109,7 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
         <div class="slide-content">
           <h1>Model X</h1>
           <p>O SUV com o maior desempenho já fabricado. Até 580 km de autonomia.</p>
-           <a class="exbtn" href="#">Descubra</a>
+           <a class="exbtn" href="mxhome.php">Descubra</a>
         </div>
       </div>
       <div class="carousel-slide">
@@ -159,13 +159,14 @@ Com o avanço da tecnologia e a crescente demanda por soluções de mobilidade s
   </div>
 
 
-  <footer class="footer">
+ <footer class="footer">
   <div class="footer-container">
     <div class="footer-links">
       <a href="verdavolt.php">Verda Volt © 2025</a>
       <a href="sobrenos.php">Um pouco sobre nós</a>
-      <a href="#carros">Carros</a>
-      <a href="#variedades">Variedades</a>
+      <a href="verdavolt.php#carros">Carros</a>
+      <a href="verdavolt.php#variedades">Variedades</a>
+      <a href="maproject.php">Projeto Meio Ambiente</a>
     </div>
   </div>
 </footer>

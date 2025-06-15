@@ -24,8 +24,8 @@ $logado = isset($_SESSION['email']);
    <a href="verdavolt.php" class="nav-logo">VerdaV</a>
    <ul class="nav-links">  
      <li><a href="sobrenos.php">Sobre Nós</a></li>
-     <li><a href="#carros">Carros</a></li>
-     <li><a href="#variedades">Variedades</a></li> 
+     <li><a href="verdavolt.php#carros">Carros</a></li>
+     <li><a href="verdavolt.php#variedades">Variedades</a></li> 
     
       <li class="dropdown">
         <?php 
@@ -216,34 +216,34 @@ $logado = isset($_SESSION['email']);
 
     const exteriorImages = {
       pearl_white: {
-        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSW,$WY19P,$IPB8&view=FRONT34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSW,$WY19P,$IPW8&view=SIDE&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSW,$WY19P,$IPW8&view=REAR34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSW,$WY19P,$IPW8&view=RIMCLOSEUP&model=my&size=1920&bkba_opt=2&crop=0,0,80,0&overlay=0&  '
+        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PPSW,$WX02,$IBE01&view=FRONT34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PPSW,$WX02,$IBE01&view=SIDE&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PPSW,$WX02,$IBE01&view=REAR34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PPSW,$WX02,$IBE01&view=RIMCLOSEUP&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&  '
       },
       solid_black: {
-        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PX02,$WY19P,$IPW8&view=FRONT34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PX02,$WY19P,$IPB8&view=SIDE&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PX02,$WY19P,$IPW8&view=REAR34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PX02,$WY19P,$IPW8&view=RIMCLOSEUP&model=my&size=1920&bkba_opt=2&crop=0,0,80,0&overlay=0&'
+        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PX02,$WX02,$IBE01&view=FRONT34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PX02,$WX02,$IBE01&view=SIDE&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PX02,$WX02,$IBE01&view=REAR34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PX02,$WX02,$IBE01&view=RIMCLOSEUP&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&'
       },
       deep_blue: {
-        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSB,$WY19P,$IPB8&view=FRONT34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSB,$WY19P,$IPB8&view=SIDE&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSB,$WY19P,$IPB8&view=REAR34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PPSB,$WY19P,$IPB8&view=RIMCLOSEUP&model=my&size=1920&bkba_opt=2&crop=0,0,80,0&overlay=0&'
+        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PB00,$WX02,$IBE01&view=FRONT34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PB00,$WX02,$IBE01&view=SIDE&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PB00,$WX02,$IBE01&view=REAR34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PB00,$WX02,$IBE01&view=RIMCLOSEUP&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&'
       },
       ultra_red: {
-        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PR01,$WY19P,$IPW8&view=FRONT34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PR01,$WY19P,$IPW8&view=SIDE&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PR01,$WY19P,$IPW8&view=REAR34&model=my&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
-        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTY60,$PR01,$WY19P,$IPW8&view=RIMCLOSEUP&model=my&size=1920&bkba_opt=2&crop=0,0,80,0&overlay=0&'
+        frontal: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PR01,$WX02,$IBE01&view=FRONT34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        lateral: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PR01,$WX02,$IBE01&view=SIDE&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        traseira: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PR01,$WX02,$IBE01&view=REAR34&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&',
+        rodas: 'https://static-assets.tesla.com/configurator/compositor?context=design_studio_2&options=$MTX22,$PR01,$WX02,$IBE01&view=RIMCLOSEUP&model=mx&size=1920&bkba_opt=2&crop=0,0,0,0&overlay=0&'
       },
       stealth_grey: {
-       frontal: 'my/carromy.jpg',
-        lateral: 'my/ladomy.jpg',
-        traseira: 'my/trasmy.jpg',
-        rodas: 'my/rodamy.jpg'
+       frontal: 'mx/carrox.jpg',
+        lateral: 'mx/ladox.jpg',
+        traseira: 'mx/trasx.jpg',
+        rodas: 'mx/rodax.jpg'
       }
     };
 

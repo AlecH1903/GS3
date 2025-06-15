@@ -162,15 +162,18 @@ Nossa Missão: <br>
   </div>
 
 
+  
   <footer class="footer">
   <div class="footer-container">
     <div class="footer-links">
-      <a href="verdavolt.html">Verda Volt © 2025</a>
+      <a href="verdavolt.php">Verda Volt © 2025</a>
       <a href="sobrenos.php">Um pouco sobre nós</a>
-      <a href="#carros">Carros</a>
-      <a href="#variedades">Variedades</a>
+      <a href="verdavolt.php#carros">Carros</a>
+      <a href="verdavolt.php#variedades">Variedades</a>
+      <a href="maproject.php">Projeto Meio Ambiente</a>
     </div>
   </div>
+  
 </footer>
 
     <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script> 
