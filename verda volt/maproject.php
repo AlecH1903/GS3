@@ -148,8 +148,8 @@ include("code/assinar.php");
     <div class="footer-links">
       <a href="verdavolt.html">Verda Volt © 2025</a>
       <a href="sobrenos.php">Um pouco sobre nós</a>
-      <a href="verdavolt#carros">Carros</a>
-      <a href="verdavolt#variedades">Variedades</a>
+      <a href="verdavolt.php#carros">Carros</a>
+      <a href="verdavolt.php#variedades">Variedades</a>
     </div>
   </div>
 </footer>

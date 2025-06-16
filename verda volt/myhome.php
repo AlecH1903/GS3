@@ -59,7 +59,7 @@ include_once("code/loginC.php");
       <p>A partir de 90 mil</p>
       <div class="buttons">
         <a href="modely.php" class="btn">Encomendar Agora</a>
-        <a href="#" class="btn btn-secondary">Ver Inventário</a>
+        <a href="inventario.php" class="btn btn-secondary">Ver Inventário</a>
       </div>
     </div>
   </section>
@@ -309,7 +309,7 @@ include_once("code/loginC.php");
       <p>Desempenho e segurança de última geração</p>
       <div class="buttons">
         <a href="modely.php" class="btn">Encomendar Agora</a>
-        <a href="#" class="btn btn-secondary">Ver mais</a>
+        <a href="inventario.php" class="btn btn-secondary">Ver Inventário</a>
       </div>
     </div>
   </section>

@@ -170,7 +170,7 @@ $logado = isset($_SESSION['email']);
          
           </div>
           <?php if(isset($_SESSION['assinante']) && $_SESSION['assinante'] == 1){ ?>
-          <div id="totalPrice">R$50.400</div>
+          <div id="totalPrice">R$50.000</div>
           <button id="buyButton">Comprar Agora</button>
         </div>
         <?php } else{ ?>
@@ -336,7 +336,7 @@ function updateSpecs() {
       }
       total += wheel.price;
       updateSpecs();
-      document.getElementById('totalPrice').textContent = `$${total.toLocaleString()}`;
+      document.getElementById('totalPrice').textContent = `R$${total.toLocaleString()}`;
 
 
     }

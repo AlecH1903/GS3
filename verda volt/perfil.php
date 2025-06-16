@@ -171,9 +171,8 @@ $ultimos_dois = substr($user['cpf'], -2);
     margin-top: 20px;" class="button-container">
   <button type="button" class="edit-button" onclick="showEditForm()">Alterar Dados</button>
   <?php if(isset($_SESSION['assinante'])): ?>
-        <form style="margin: 0;" action="code/cancelar.php" method="post" class="cancel-form">
-            <button type="submit" name="cancelar_assinatura" class="cancel-button">Cancelar Assinatura</button>
-        </form>
+        
+           <a type="button" style="text-decoration: none; color: white" href="cancelarass.php"  class="cancel-button"> Cancelar Assinatura </a> 
     <?php endif; ?>
 </div>
 
@@ -183,12 +182,18 @@ if (isset($_SESSION['mensagem'])) {
     unset($_SESSION['mensagem']);
 }
 ?>
+<?php
+if (isset($_SESSION['mensagemerro'])) {
+    echo '<div class="alert error-msg ">' . $_SESSION['mensagemerro'] . '</div>';
+    unset($_SESSION['mensagemerro']);
+}
+?>
 
   <div class="edit-form" id="editForm" style="display:none;">
     <input type="text" id="nome" name="nome" placeholder="Nome" value="<?= htmlspecialchars($user['nome']) ?>" required>
     <input type="email" id="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" required>
     <input type="text" id="cpf" name="cpf" value="<?= htmlspecialchars($user['cpf']) ?>" readonly>
-    <input type="text" id="data" name="data" value="<?= htmlspecialchars(($_SESSION['data'])) ?>" required>
+    <input type="text" maxlength="10"  id="data" name="data" value="<?= htmlspecialchars(($_SESSION['data']))?>" oninput="formatardata(this)" required >
     <input type="text" id="telefone" name="telefone" value="<?= htmlspecialchars($user['telefone']) ?>">
     <label for="nova_senha">Nova Senha (opcional):</label>
     <input type="password" id="nova_senha" name="nova_senha" placeholder="Deixe em branco para não alterar">
@@ -200,11 +205,25 @@ if (isset($_SESSION['mensagem'])) {
 </form>
 
   <script>
+
+function formatardata(campo) {
+  let data = campo.value.replace(/\D/g, ''); // Remove tudo que não for número
+
+  if (data.length > 10) data = data.slice(0, 10); // Limita a 10 dígitos
+
+  data = data.replace(/(\d{2})(\d)/, '$1/$2');
+  data = data.replace(/(\d{2})(\d)/, '$1/$2');
+  
+
+  campo.value = data;
+}
+
+
     let cpfMasked = true;
     function toggleCPF() {
       const cpfEl = document.getElementById('cpf');
       if (cpfMasked) {
-        cpfEl.textContent = '<?= htmlspecialchars($user['cpf']) ?>';
+        cpfEl.textContent = '<?= htmlspecialchars($user['cpf']) ?>'.replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})$/, '$1-$2');
       } else {
         cpfEl.textContent = '***.***.***-<?= htmlspecialchars($ultimos_dois) ?>';
       }

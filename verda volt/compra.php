@@ -3,7 +3,7 @@ include_once("code/loginC.php");
 include_once("code/conexao.php"); 
 
 if (!isset($_SESSION['cpf'])) {
-    echo "Usuário não autenticado.";
+    header('Location: login.php');
     exit;
 }
 

@@ -324,7 +324,7 @@ function updateSpecs() {
       }
       total += wheel.price;
       updateSpecs();
-      document.getElementById('totalPrice').textContent = `$${total.toLocaleString()}`;
+      document.getElementById('totalPrice').textContent = `R$${total.toLocaleString()}`;
 
 
     }

@@ -44,7 +44,7 @@ include_once("code/conexao.php");
       <input type="email" id="email" name="email" required>
 
       <label for="idade">Idade</label>
-      <input type="date" id="idade" name="idade" min="0" required>
+      <input type="date" id="idade" name="idade" min="18" required>
 
       <label for="telefone">Número de Telefone</label>
       <input type="tel" id="telefone" name="telefone" required oninput="formatarnumero(this)">
