@@ -21,14 +21,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $novo_nome = $_POST['nome'];
         $novo_email = $_POST['email'];
         $novo_telefone = $_POST['telefone'];
-        $nova_data_nascimento = $_POST['data'];
+        $idade = $_POST['data'];
+        $date = date('Y') - date('Y', strtotime($idade));
+        
+        if ($date < 18 ) {
+            $_SESSION['mensagemerro'] = "você precisa ser maior de idade";
+            header("location: perfil.php");end();
+        }
+        $nova_data_nascimento = $idade;
         $nova_senha = $_POST['nova_senha'];
         if(isset($_POST['foto'])){
         $foto = $_POST['foto'];
         }
         $resultado = mysqli_query($conexao, "SELECT senha FROM usuarios WHERE email = '".$_SESSION['email']."'");
         $usuario = mysqli_fetch_assoc($resultado);
-
+var_dump($nova_data_nascimento);
         if ($usuario && password_verify($senha_atual, $usuario['senha'])) {
             
             
@@ -46,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $campos[] = "email = '".mysqli_real_escape_string($conexao, $novo_email)."'";
                     $_SESSION['email'] = $novo_email;
                 } else {
-                    $erros[] = "Este e-mail já está em uso por outro usuário.";
+                    $_SESSION['mensagemerro'] = "Este e-mail já está em uso por outro usuário.";
                 }
             }
             
@@ -66,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
                     $campos[] = "senha = '".$senha_hash."'";
                 } else {
-                    $erros[] = "A nova senha deve ter pelo menos 6 caracteres.";
+                    $_SESSION['mensagemerro'] = "A nova senha deve ter pelo menos 6 caracteres.";
                 }
             }
             if(isset($foto)){
@@ -81,11 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (mysqli_query($conexao, $sql)) {
                     $sucesso = true;
                 } else {
-                    $erros[] = "Erro ao atualizar os dados. Por favor, tente novamente.";
+                    $_SESSION['mensagemerro'] = "Erro ao atualizar os dados. Por favor, tente novamente.";
                 }
             }
         } else {
-            $erros[] = "Senha atual incorreta. Por favor, tente novamente.";
+            $_SESSION['mensagemerro'] = "Senha atual incorreta. Por favor, tente novamente.";
         }
         if (isset($_FILES['foto']) && $_FILES['foto']['error'] === 0) {
     $imagem = file_get_contents($_FILES['foto']['tmp_name']);
@@ -97,7 +104,7 @@ $cpf = $_SESSION['cpf'];
     if (mysqli_query($conexao, $sqlFoto)) {
       $sucesso = true;
     } else {
-      $erros[] = "Erro ao atualizar foto.";
+      $_SESSION['mensagemerro'] = "Erro ao atualizar foto.";
     }
   }
  $cpf = $_SESSION['cpf'];

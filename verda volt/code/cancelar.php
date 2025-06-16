@@ -3,6 +3,17 @@ $id_usuario = $_SESSION['cpf'];
 
 if(isset($_POST['cancelar_assinatura'])){
 
+    
+    if(!$_POST['senha']){
+        $erros[] = "Insira sua senha";
+    }else{
+$senha = $_POST['senha'];}
+
+$sql = mysqli_query($conexao,"SELECT senha FROM usuarios WHERE cpf = '$id_usuario'");
+$result = mysqli_fetch_assoc($sql);
+
+if($result && password_verify($senha,$result['senha']));{
+
 $sql_check = "SELECT assinante FROM usuarios WHERE cpf = '$id_usuario'";
 $result_check = mysqli_query($conexao, $sql_check);
 
@@ -17,7 +28,7 @@ if ($result_check && mysqli_num_rows($result_check) > 0) {
  $sql_assinatura = "UPDATE assinaturas 
                              SET ativa = 0, 
                                  data_expiracao = NOW() 
-                             WHERE id_usuario = '$id_usuario'";
+                             WHERE id_usuario = '$id_usuario' AND ativa = '1';";
             mysqli_query($conexao, $sql_assinatura);
 
         unset($_SESSION['assinante']);
@@ -25,8 +36,10 @@ if ($result_check && mysqli_num_rows($result_check) > 0) {
     } else {
         $_SESSION['mensagem'] = "Você não possui uma assinatura ativa.";
     }
-}
+header("Location: perfil.php");}else{ $erros[] = "Senha incorreta";
+} 
 
-header("Location: perfil.php");
-exit();}
+ }
+
+ }
 ?>
